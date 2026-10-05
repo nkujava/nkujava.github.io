@@ -61,12 +61,12 @@ address {
   font-style: normal;
 }
 
-/* Full-width 40/60 split, with photo and contact in the left column. */
+/* Text on the left, with the active tab's media on the right. */
 body {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   grid-template-rows: minmax(0, 1fr);
-  grid-template-areas: "sidebar main";
+  grid-template-areas: "main sidebar";
   column-gap: 2rem;
   height: 100dvh;
   margin: 0;
@@ -83,13 +83,36 @@ main {
   scrollbar-gutter: stable both-edges;
 }
 
+.media-panel { display: none; }
+
+body:has(input[name="section"][value="about"]:checked) #about-media,
+body:has(input[name="section"][value="education"]:checked):has(input[name="school"][value="pku"]:checked) #pku-media,
+body:has(input[name="section"][value="projects"]:checked):has(input[name="project"][value="localization"]:checked) #localization-media,
+body:has(input[name="section"][value="projects"]:checked):has(input[name="project"][value="planner"]:checked) #planner-media,
+body:has(input[name="section"][value="projects"]:checked):has(input[name="project"][value="simulator"]:checked) #simulator-media {
+  display: block;
+}
+
+body:has(input[name="section"][value="experience"]:checked),
+body:has(input[name="section"][value="education"]:checked):has(input[name="school"][value="madison"]:checked) {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "main";
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+body:has(input[name="section"][value="experience"]:checked) .sidebar,
+body:has(input[name="section"][value="education"]:checked):has(input[name="school"][value="madison"]:checked) .sidebar {
+  display: none;
+}
+
 /* Exact 3px scrollbar in Chrome, Edge, and Safari; thin fallback elsewhere. */
 @supports selector(::-webkit-scrollbar) {
-  main {
+  main, .sidebar {
     scrollbar-width: auto;
   }
 
-  main::-webkit-scrollbar {
+  main::-webkit-scrollbar, .sidebar::-webkit-scrollbar {
     width: 3px;
     height: 3px;
   }
@@ -115,6 +138,14 @@ main {
   /* Allow access to every contact link on short screens or at large text sizes. */
   max-height: 100%;
   overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+@supports selector(::-webkit-scrollbar) {
+  .sidebar { scrollbar-width: auto; }
+  .sidebar::-webkit-scrollbar-thumb { background: #888; border-radius: 3px; }
+  .sidebar::-webkit-scrollbar-track { background: transparent; }
+  .sidebar::-webkit-scrollbar-button { display: none; }
 }
 
 .section-header {
@@ -220,9 +251,17 @@ article > :last-child, section > :last-child {
   margin-bottom: 0;
 }
 
-/* Project evidence stays in the text column, with captions and ordinary tables. */
+/* Media and captions share the right column and stack below text on mobile. */
 .project-evidence {
   margin-top: 1rem;
+}
+
+.media-panel > .project-evidence {
+  margin-top: 0;
+}
+
+.sidebar .project-evidence img {
+  margin-bottom: 0;
 }
 
 .project-case-study > h4,
@@ -265,7 +304,6 @@ article > :last-child, section > :last-child {
   display: block;
   width: 100%;
   height: auto;
-  min-height: 200px;
   aspect-ratio: 16 / 9;
   border: 0;
 }
@@ -324,12 +362,12 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
-main:focus-visible {
+main:focus-visible, .sidebar:focus-visible {
   outline: 2px solid #0000ee;
   outline-offset: -2px;
 }
 
-/* On small screens, the profile appears first and the whole page scrolls. */
+/* On small screens, selected media follows the text and the whole page scrolls. */
 @media (max-width: 800px) {
   body {
     display: block;

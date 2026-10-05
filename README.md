@@ -8,9 +8,10 @@ A single-page academic homepage made with HTML, CSS, and a small inline script.
 No installation, framework, or build step is required.
 
 The design uses traditional serif type, browser-style blue links, and compact
-sections. Desktop uses a full-width, proportional 40/60 split: photo and contact
-information on the left, with the name centered above section tabs on the right.
-The right column scrolls independently while the left column stays in place.
+sections. Desktop places text and centered navigation in the left column, with
+the selected tab's images, videos, and captions in the right column (a 60/40 split).
+The text and media columns scroll independently. The sand photo and contact
+details appear only on About. Tabs without media use a centered text column.
 The plain underlined section controls display one category at a time. They use
 native radio controls: Tab to the selected category, then use arrow keys to switch.
 Projects has a second row of controls for Localization, Mid-Level Planner, and
@@ -24,9 +25,9 @@ for People and Robots, Rosenberg Lab, and Wisconsin Autonomous. It defaults to
 People and Robots whenever opened. Publications appear with People and Robots.
 Use Tab and arrow keys for these controls; without JavaScript, the selected
 subtab persists when returning to Research & Experience.
-The left column can scroll if needed on short screens to keep contact links
-accessible. On smaller screens, the page scrolls normally in a single column,
-with the photo and contact appearing before the name and tabbed content.
+On smaller screens, the page scrolls normally in a single column, with the
+selected media and captions following the text. Media lives in the corresponding
+`*-media` panel in the sidebar; CSS connects each panel to its tab selection.
 The visual references are [Isabella Scott's homepage](https://people.math.wisc.edu/~iscott6/)
 and [Zev Chonoles's academic website guide](https://math.uchicago.edu/~chonoles/miscellany/making-a-website/).
 
@@ -104,7 +105,7 @@ The contribution paragraph credits Adrian Luo for the simulator and road generat
 2. Inside the relevant project, copy an existing figure or uncomment an `IMAGE TEMPLATE`.
    Set `src` to the real relative path, write descriptive `alt` text, and add a
    caption explaining the scenario, axes/units, test conditions, and result.
-   Images scale to the text column without cropping. You can add intrinsic
+   Images scale to the media column without cropping. You can add intrinsic
    `width` and `height` attributes matching the file's dimensions to reserve space.
 3. Uncomment the `DATA TEMPLATE` to add measured results and a CSV download.
    Change the metric, units, value, table caption, and file link. Duplicate table
