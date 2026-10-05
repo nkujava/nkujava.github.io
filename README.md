@@ -92,6 +92,15 @@ the HTML, or vice versa.
 The citation and project evidence templates contain bracketed examples and
 placeholder paths inside HTML comments; these are not displayed on the page.
 
+## Update reading notes
+
+Find the `READING` comment in `index.html`. When you have an entry, remove the
+"Reading notes coming soon." paragraph and uncomment the `reading-list` list.
+Replace the bracketed title, URL, and personal note, then duplicate its `<li>`
+for additional entries. Keep up to three short entries, newest first, so the
+fixed sidebar remains compact. The reading section appears with the default
+photo and contact panel. No API keys, external service, or build step is needed.
+
 ## Add project images, videos, and data
 
 Each project has a **Results and supporting material** subsection. Search for

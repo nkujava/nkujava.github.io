@@ -220,6 +220,49 @@ main:has(input[name="school"][value="pku"]:checked) #madison-education {
   dynamic-range-limit: standard;
 }
 
+/* A compact personal sidebar, with room for contact details and reading notes. */
+#about-media {
+  max-width: 520px;
+  padding: 0 clamp(0px, 1vw, 16px);
+}
+
+#about-media > img {
+  width: auto;
+  max-width: 100%;
+  max-height: 30dvh;
+  margin-bottom: 1rem;
+}
+
+.profile-summary {
+  margin-bottom: 1.25rem;
+}
+
+#about-media h2 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+#about-media section + section {
+  margin-top: 1.5rem;
+}
+
+.reading-empty {
+  color: #555;
+}
+
+.reading-list {
+  list-style: none;
+  padding: 0;
+}
+
+.reading-list li + li {
+  margin-top: 0.85rem;
+}
+
+.reading-list p {
+  margin: 0.25rem 0 0;
+}
+
 section {
   margin-bottom: 1.5rem;
 }
@@ -363,5 +406,14 @@ main:focus-visible, .sidebar:focus-visible {
   main, .sidebar {
     max-height: none;
     overflow: visible;
+  }
+
+  #about-media {
+    padding: 0;
+  }
+
+  #about-media > img {
+    width: 100%;
+    max-height: none;
   }
 }
