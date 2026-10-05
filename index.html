@@ -55,6 +55,29 @@
         human&ndash;robot interaction in the People and Robots Laboratory,
         and neural encoding models in the Rosenberg Lab.
       </p>
+      <div class="site-guide">
+        <h3>Around this site</h3>
+        <p>
+          <strong>If you're a recruiter,</strong> start with
+          <a href="#projects" data-section="projects">Projects</a> for what I've
+          built, my role, and examples of the work. My
+          <a href="#education" data-section="education">Education</a> section
+          covers my academic background and coursework.
+        </p>
+        <p>
+          <strong>If you're a researcher or potential collaborator,</strong>
+          <a href="#experience" data-section="experience">Research &amp; Experience</a>
+          covers my work in human&ndash;robot interaction, neural encoding, and
+          autonomous vehicles. The project write-ups go into the methods,
+          testing, and lessons learned.
+        </p>
+        <p>
+          <strong>If you're a friend or just looking around,</strong> you can
+          browse <a href="#reading">what I've been reading</a> or take a look at
+          my <a href="#pku-education" data-section="education" data-school="pku">summer at Peking University</a>.
+          Feel free to say hello&mdash;my contact details are alongside the reading list.
+        </p>
+      </div>
     </section>
 
     <!-- EDUCATION: expand the Madison entry when additional details are supplied. -->
@@ -595,6 +618,22 @@
     educationTab.addEventListener('change', resetEducation);
     document.querySelectorAll('input[name="project"], input[name="affiliation"], input[name="school"]').forEach(input => {
       input.addEventListener('change', () => { main.scrollTop = 0; document.querySelector(".sidebar").scrollTop = 0; });
+    });
+    // The About guide opens the corresponding tabs and moves keyboard focus with them.
+    document.querySelectorAll('.site-guide a[data-section]').forEach(link => {
+      link.addEventListener('click', event => {
+        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        const tab = document.querySelector(`input[name="section"][value="${link.dataset.section}"]`);
+        tab.click();
+        const school = link.dataset.school
+          ? document.querySelector(`input[name="school"][value="${link.dataset.school}"]`)
+          : null;
+        if (school) school.click();
+        (school || tab).focus({ preventScroll: true });
+        main.scrollTop = 0;
+        document.querySelector('.section-header').scrollIntoView({ block: 'start' });
+      });
     });
   </script>
 </body>

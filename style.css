@@ -57,6 +57,18 @@ ul {
   font-style: italic;
 }
 
+.site-guide {
+  margin-top: 1.5rem;
+}
+
+.site-guide h3 {
+  margin-bottom: 0.65rem;
+}
+
+.site-guide p + p {
+  margin-top: 1rem;
+}
+
 address {
   font-style: normal;
 }
