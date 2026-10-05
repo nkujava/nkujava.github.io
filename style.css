@@ -146,6 +146,19 @@ article > :last-child, section > :last-child {
   max-width: 440px;
 }
 
+.localization-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.localization-gallery .trajectory-comparison {
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+}
+
 .project-evidence img {
   display: block;
   width: 100%;
