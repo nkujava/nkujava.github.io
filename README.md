@@ -28,6 +28,8 @@ subtab persists when returning to Research & Experience.
 On smaller screens, the page scrolls normally in a single column, with the
 selected media and captions following the text. Media lives in the corresponding
 `*-media` panel in the sidebar; CSS connects each panel to its tab selection.
+The Simulator demo follows the project context at the bottom of its article;
+this tab uses the default photo and contact panel on the left.
 The visual references are [Isabella Scott's homepage](https://people.math.wisc.edu/~iscott6/)
 and [Zev Chonoles's academic website guide](https://math.uchicago.edu/~chonoles/miscellany/making-a-website/).
 
