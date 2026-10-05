@@ -80,10 +80,9 @@ placeholder paths inside HTML comments; these are not displayed on the page.
 
 Each project has a **Results and supporting material** subsection. Search for
 `LOCALIZATION RESULTS` or `MID-LEVEL PLANNER RESULTS` in `index.html` to edit it.
-The simulator case study has a visible 16:9 video placeholder. At `SIMULATOR RESULTS`,
-replace the `.video-placeholder` element with a native `<video controls>` for a
-local MP4 or a titled iframe for a hosted recording, and update the caption.
-For a local video, set `width: 100%; aspect-ratio: 16 / 9;` to retain the layout.
+The simulator case study embeds the YouTube recording `YoG1P2SROU0` under Demo.
+At `SIMULATOR RESULTS`, update both the iframe source and the direct YouTube link
+when replacing the recording. The player uses the shared responsive video styling.
 Replace `[Teammate name]` in the contribution paragraph when the credit is supplied.
 
 1. Put your screenshots, plots, CSV files, or PDF reports in `assets/projects/`.
