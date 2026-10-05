@@ -44,8 +44,8 @@
       </fieldset>
       <fieldset class="section-tabs research-tabs">
         <legend>Browse research labs</legend>
-        <label><input type="radio" name="lab" value="rosenberg" aria-controls="rosenberg-research" checked>Rosenberg Lab</label>
-        <label><input type="radio" name="lab" value="people-robots" aria-controls="people-robots-research writing">People and Robots</label>
+        <label><input type="radio" name="lab" value="people-robots" aria-controls="people-robots-research writing" checked>People and Robots</label>
+        <label><input type="radio" name="lab" value="rosenberg" aria-controls="rosenberg-research">Rosenberg Lab</label>
       </fieldset>
       <fieldset class="section-tabs project-tabs">
         <legend>Browse projects</legend>
@@ -492,7 +492,7 @@
     projectsTab.addEventListener('change', resetProjects);
     const researchTab = document.querySelector('input[name="section"][value="research"]');
     function resetResearch() {
-      document.querySelector('input[name="lab"][value="rosenberg"]').checked = true;
+      document.querySelector('input[name="lab"][value="people-robots"]').checked = true;
       main.scrollTop = 0;
     }
     researchTab.addEventListener('click', resetResearch);

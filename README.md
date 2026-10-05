@@ -19,8 +19,8 @@ Projects to Localization whenever the main Projects control is activated and
 returns the desktop content column to the top when switching projects.
 Without JavaScript, section and project selection still work, but the selected
 project persists when returning to Projects.
-Research & Writing similarly has Rosenberg Lab and People and Robots subtabs,
-defaulting to Rosenberg whenever the parent section is opened. The publications
+Research & Writing similarly has People and Robots and Rosenberg Lab subtabs,
+defaulting to People and Robots whenever the parent section is opened. The publications
 section appears with People and Robots. Use Tab and arrow keys for these controls;
 without JavaScript, the selected lab persists when returning to Research & Writing.
 The left column can scroll if needed on short screens to keep contact links
