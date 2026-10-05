@@ -61,12 +61,12 @@ address {
   font-style: normal;
 }
 
-/* Text on the left, with the active tab's media on the right. */
+/* Active tab media on the left, with text and navigation on the right. */
 body {
   display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
   grid-template-rows: minmax(0, 1fr);
-  grid-template-areas: "main sidebar";
+  grid-template-areas: "sidebar main";
   column-gap: 2rem;
   height: 100dvh;
   margin: 0;
@@ -86,24 +86,13 @@ main {
 .media-panel { display: none; }
 
 body:has(input[name="section"][value="about"]:checked) #about-media,
+body:has(input[name="section"][value="experience"]:checked) #about-media,
+body:has(input[name="section"][value="education"]:checked):has(input[name="school"][value="madison"]:checked) #about-media,
 body:has(input[name="section"][value="education"]:checked):has(input[name="school"][value="pku"]:checked) #pku-media,
 body:has(input[name="section"][value="projects"]:checked):has(input[name="project"][value="localization"]:checked) #localization-media,
 body:has(input[name="section"][value="projects"]:checked):has(input[name="project"][value="planner"]:checked) #planner-media,
 body:has(input[name="section"][value="projects"]:checked):has(input[name="project"][value="simulator"]:checked) #simulator-media {
   display: block;
-}
-
-body:has(input[name="section"][value="experience"]:checked),
-body:has(input[name="section"][value="education"]:checked):has(input[name="school"][value="madison"]:checked) {
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-areas: "main";
-  max-width: 960px;
-  margin-inline: auto;
-}
-
-body:has(input[name="section"][value="experience"]:checked) .sidebar,
-body:has(input[name="section"][value="education"]:checked):has(input[name="school"][value="madison"]:checked) .sidebar {
-  display: none;
 }
 
 /* Exact 3px scrollbar in Chrome, Edge, and Safari; thin fallback elsewhere. */
@@ -251,7 +240,7 @@ article > :last-child, section > :last-child {
   margin-bottom: 0;
 }
 
-/* Media and captions share the right column and stack below text on mobile. */
+/* Media and captions share the left column and stack below text on mobile. */
 .project-evidence {
   margin-top: 1rem;
 }

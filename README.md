@@ -8,10 +8,10 @@ A single-page academic homepage made with HTML, CSS, and a small inline script.
 No installation, framework, or build step is required.
 
 The design uses traditional serif type, browser-style blue links, and compact
-sections. Desktop places text and centered navigation in the left column, with
-the selected tab's images, videos, and captions in the right column (a 60/40 split).
+sections. Desktop places the selected tab's images, videos, and captions on the
+left, with text and centered navigation on the right (a 40/60 split).
 The text and media columns scroll independently. The sand photo and contact
-details appear only on About. Tabs without media use a centered text column.
+details appear on About and serve as the default for tabs without their own media.
 The plain underlined section controls display one category at a time. They use
 native radio controls: Tab to the selected category, then use arrow keys to switch.
 Projects has a second row of controls for Localization, Mid-Level Planner, and
