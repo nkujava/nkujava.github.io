@@ -262,22 +262,56 @@
           the existing system rather than relying on a generic online answer.
         </p>
       </article>
-      <article id="planner-project">
+      <article id="planner-project" class="project-case-study">
         <h3>Autonomous Vehicle Mid-Level Planner</h3>
-        <p class="details">Wisconsin Autonomous</p>
+        <p class="details">Wisconsin Autonomous · SAE AutoDrive</p>
+        <p class="details">Technologies: Python, ROS 2, NumPy, and Frenet-frame planning.</p>
+
+        <h4>Motivation</h4>
         <p>
-          I developed a Python/ROS 2 planner that integrates localization,
-          perception, and route data to generate reference trajectories for
-          model predictive control (MPC). I implemented Frenet-frame obstacle
-          avoidance, lane-boundary constraints, traffic-light and stop-sign
-          handling, and speed profiles constrained by curvature and acceleration
-          limits.
+          Our previous midplanner relied on a growing set of states with complex
+          transitions between them. As we added driving situations, that approach
+          became difficult to extend. A more robust perception stack also made
+          lane-line detections available, creating an opportunity to rewrite the
+          planner around the geometry the vehicle could observe.
         </p>
-        <p class="details">Technologies: Python and ROS 2.</p>
+
+        <h4>My contribution</h4>
+        <p>
+          I helped select the planning algorithm and collaborated with my lead,
+          Patrick Chen, to write and test the new mid-level planner as part of
+          a roughly three-person planning effort. Our work connected localization,
+          perception, and high-level route information to the vehicle's control
+          stack. A separate subteam developed the model predictive controller
+          (MPC) that consumes the planner's output.
+        </p>
+
+        <h4>How it works</h4>
+        <p>
+          The planner uses Frenet coordinates: distance along a reference route
+          and lateral offset from it. It combines route guidance with detected
+          lanes and active restrictions, evaluates candidate paths, and produces
+          a reference trajectory with headings and a speed profile for MPC.
+          This gives us a way to respond to changing lane geometry and constraints
+          without encoding every combination as a separate driving state.
+        </p>
+        <p>
+          Algorithm selection was closely tied to testing logistics. Our course
+          in Columbus is about a forty-minute drive away, and access must be
+          scheduled around police training because we share the facility.
+          Simulation was therefore central to exploring and refining planning
+          ideas before spending limited time testing on the vehicle.
+        </p>
         <!-- Add a repository or project link here when available. -->
         <!-- MID-LEVEL PLANNER RESULTS: duplicate a figure to add another demo or plot. -->
         <section class="project-evidence" aria-labelledby="planner-results-heading">
-          <h4 id="planner-results-heading">Results and supporting material</h4>
+          <h4 id="planner-results-heading">Demo and results</h4>
+          <p>
+            This planner runs on the vehicle. The main gain over the previous
+            iteration was incorporating lane-line detections into planning.
+            The recording below shows this version during our team's AV test;
+            it demonstrates the integrated system, including work from other subteams.
+          </p>
           <figure>
             <iframe
               src="https://www.youtube-nocookie.com/embed/buRxjcsR3aQ"
@@ -290,7 +324,7 @@
               allowfullscreen
             ></iframe>
             <figcaption>
-              Wisconsin Autonomous AV 2025 — our autonomous vehicle test submission from 2025.
+              Wisconsin Autonomous AV 2025 — our test submission with this midplanner running on the vehicle.
               <a href="https://www.youtube.com/watch?v=buRxjcsR3aQ">Watch the AV test on YouTube</a>.
             </figcaption>
           </figure>
@@ -310,6 +344,16 @@
           <p><a href="assets/projects/planner-results.csv" download>Download planner test data (CSV)</a></p>
           -->
         </section>
+        <h4>Lessons learned</h4>
+        <p>
+          This project deepened my understanding of control theory, testing,
+          and integration across an autonomous vehicle stack. It also showed
+          me how access to hardware shapes engineering decisions: simulation
+          helped us refine ideas before scheduled course tests, while vehicle
+          testing exposed integration issues that needed the full system.
+          The rewrite gave us a more maintainable foundation for extending
+          planning behavior as perception capabilities improved.
+        </p>
       </article>
       <!-- MIDPLANNER SIMULATOR: early planning prototype and lessons learned. -->
       <article id="midplanner-simulator" class="project-case-study">
