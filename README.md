@@ -59,7 +59,8 @@ the HTML, or vice versa.
    description are in the `<head>`.
 2. **Research:** the Rosenberg Lab and People and Robots Laboratory entries
    include your roles, dates, and research contributions.
-3. **Projects and experience:** edit the two autonomous vehicle projects and
+3. **Projects and experience:** edit the localization, mid-level planner, and
+   midplanner simulator projects and the
    Wisconsin Autonomous role. Add real repository or project links when available.
 4. **Publications / Writing (inside Research & Writing):** the CHI 2027 paper is described as submitted.
    Add its title, authors, and public link when available, and update its status
@@ -79,6 +80,8 @@ placeholder paths inside HTML comments; these are not displayed on the page.
 
 Each project has a **Results and supporting material** subsection. Search for
 `LOCALIZATION RESULTS` or `MID-LEVEL PLANNER RESULTS` in `index.html` to edit it.
+The simulator has a commented `SIMULATOR RESULTS` template for a future screenshot
+or recording; uncomment it after adding real evidence.
 
 1. Put your screenshots, plots, CSV files, or PDF reports in `assets/projects/`.
    Use simple filenames such as `localization-trajectory.png` or
