@@ -169,22 +169,54 @@
     <!-- PROJECTS: duplicate an article to add an entry. -->
     <section id="projects" aria-labelledby="projects-heading">
       <h2 id="projects-heading">Projects</h2>
-      <article id="localization-project">
+      <article id="localization-project" class="project-case-study">
         <h3>Autonomous Vehicle Localization</h3>
-        <p class="details">Wisconsin Autonomous</p>
+        <p class="details">Wisconsin Autonomous · SAE AutoDrive</p>
+        <p class="details">Technologies: C++, ROS 2, CAN, IMU, extended Kalman filtering, and Foxglove Studio.</p>
+
+        <h4>Motivation</h4>
         <p>
-          I developed C++/ROS 2 wheel-odometry and IMU localization nodes using
-          Ackermann geometry, CAN-derived encoder and steering data, and filtered
-          inertial measurements. The system achieved an average position error
-          of approximately 3 meters and placed 3rd out of 10 in the localization
-          challenge. I evaluated trajectories against GPS using ROS 2 bags and
-          Foxglove Studio.
+          Localization provides the vehicle-state estimate needed by our control
+          stack. In SAE AutoDrive's localization challenge, GPS is intentionally
+          made unavailable, and the vehicle must estimate its position while
+          completing a course. This was my first project with Wisconsin Autonomous.
         </p>
-        <p class="details">Technologies: C++, ROS 2, CAN, IMU, and Foxglove Studio.</p>
+
+        <h4>My contribution</h4>
+        <p>
+          I developed both the wheel-odometry and IMU localization nodes in
+          C++/ROS 2. Working with my team lead, I also contributed to combining
+          their estimates through an extended Kalman filter (EKF). Both nodes
+          run on the vehicle. A separate GPS-reliability detection node, developed
+          by another team member, supplies an input to the localization system.
+        </p>
+
+        <h4>How it works</h4>
+        <p>
+          The wheel-odometry node uses CAN-derived encoder and steering data with
+          Ackermann geometry to estimate vehicle motion. The IMU node uses inertial
+          measurements, and the EKF combines the two sources to support localization
+          when GPS becomes unreliable. Sensor noise and variations in wheel-road
+          interaction make this estimation challenging.
+        </p>
+        <p>
+          I used recorded ROS bags and Foxglove Studio to compare the estimated
+          trajectories against GPS reference data and guide improvements. Across
+          multiple ROS bags, the final-position error was approximately three
+          meters. This measures the ending position, rather than an average error
+          along the full route. The team placed third out of ten in the localization
+          challenge.
+        </p>
         <!-- Add a repository or project link here when available. -->
         <!-- LOCALIZATION RESULTS: add figures, measurements, or data below. -->
         <section class="project-evidence" aria-labelledby="localization-results-heading">
-          <h4 id="localization-results-heading">Results and supporting material</h4>
+          <h4 id="localization-results-heading">Demo and results</h4>
+          <p>
+            Red shows the estimated trajectory and blue shows the GPS reference.
+            The separation between the lines provides a visual comparison of
+            the paths; these images do not represent a calculated point-by-point
+            error metric.
+          </p>
           <!-- Duplicate this figure to add another localization plot or screenshot. -->
           <div class="localization-gallery">
           <figure class="trajectory-comparison">
@@ -208,7 +240,7 @@
             <figcaption>
               A second localization example through a parking lot: red shows
               the estimated vehicle trajectory, and blue shows the GPS trajectory.
-              <a href="assets/projects/localization-parking-lot.png">View the full-size parking-lot comparison</a>.
+              <a href="assets/projects/localization-parking-lot.png">View the full-size comparison</a>.
             </figcaption>
           </figure>
           </div>
@@ -221,6 +253,14 @@
           <p><a href="assets/projects/localization-results.csv" download>Download localization test data (CSV)</a></p>
           -->
         </section>
+        <h4>Lessons learned</h4>
+        <p>
+          This project taught me how to collaborate within a mature robotics
+          codebase and learn unfamiliar tools while working with real hardware.
+          Many questions depended on our particular sensors, interfaces, and
+          vehicle setup, so progress required working with teammates and tracing
+          the existing system rather than relying on a generic online answer.
+        </p>
       </article>
       <article id="planner-project">
         <h3>Autonomous Vehicle Mid-Level Planner</h3>
