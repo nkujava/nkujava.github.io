@@ -42,9 +42,7 @@ when committing and pushing the website.
 
 The `resume.pdf` beside `index.html` is a private local copy of the supplied
 `Nathan_Kujava_Resume.pdf`. It is ignored by Git and is not published.
-The left Contact section has a “Request resume by email” link that opens an
-email to Nathan with the subject “Resume request.” Share the PDF directly
-with people who request it.
+There is no resume link on the website.
 
 ## Edit your information
 
@@ -63,12 +61,13 @@ the HTML, or vice versa.
 4. **Publications / Writing:** the CHI 2027 paper is described as submitted.
    Add its title, authors, and public link when available, and update its status
    if it changes. A citation template is provided in an HTML comment.
-5. **Contact:** email is filled in from your resume. Update both the visible text
-   and the `mailto:` destination if it changes.
-6. **Profiles:** the left Contact section links to `github.com/nkujava` and
-   `linkedin.com/in/nathan-kujava-180a94351/`. Update them there if a profile URL changes.
+5. **Contact:** email is displayed as `[first name]kujava@gmail.com`, with no
+   `mailto:` link or complete address in the HTML. This discourages simple
+   harvesting but does not guarantee protection against scraping.
+6. **Profiles:** the left Contact section links only to
+   `linkedin.com/in/nathan-kujava-180a94351/`. Update it there if the profile URL changes.
 7. **Resume:** replace the private local `resume.pdf` when you have a new version.
-   Keep it out of Git; the sidebar provides an email request link rather than a download.
+   Keep it out of Git; the sidebar does not include a resume link.
 
 The citation and project evidence templates contain bracketed examples and
 placeholder paths inside HTML comments; these are not displayed on the page.
