@@ -208,6 +208,7 @@ article > :last-child, section > :last-child {
 }
 
 .project-case-study > h4,
+.research-case-study > h4,
 .project-case-study > .project-evidence {
   margin-top: 1.5rem;
 }
