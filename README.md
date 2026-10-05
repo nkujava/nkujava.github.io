@@ -64,9 +64,11 @@ written directly in `index.html`, so you can open it in a text editor, make chan
 save, and refresh your browser. Updating the PDF does not automatically update
 the HTML, or vice versa.
 
-1. **About Me:** edit your introduction, education, coursework, and skills in the
-   `ABOUT`, `EDUCATION`, and `SKILLS` comment blocks. The page title and meta
-   description are in the `<head>`.
+1. **About and Education:** introduction and skills are in `ABOUT` and `SKILLS`.
+   The separate Education tab contains `EDUCATION`, with Madison details ready
+   to expand and a PKU summer-program overview linked to the official curriculum.
+   Keep published program offerings distinct from personal activities and accomplishments.
+   The page title and meta description are in the `<head>`.
 2. **Research:** the Rosenberg Lab and People and Robots Laboratory entries
    include your roles, dates, and research contributions.
 3. **Projects and experience:** edit the localization, mid-level planner, and

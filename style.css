@@ -35,7 +35,7 @@ h3 {
   margin-top: 2rem;
 }
 
-#projects > article > h3 {
+#projects > article > h3, #education > article > h3 {
   font-size: 1.25rem;
   margin-bottom: 0.4rem;
 }
@@ -168,6 +168,7 @@ main {
 }
 
 main:has(input[value="about"]:checked) > section:not(#about),
+main:has(input[value="education"]:checked) > section:not(#education),
 main:has(input[value="experience"]:checked) > section:not(#experience),
 main:has(input[value="projects"]:checked) > section:not(#projects) {
   display: none;
@@ -220,6 +221,7 @@ article > :last-child, section > :last-child {
 
 .project-case-study > h4,
 .research-case-study > h4,
+.education-case-study > h4,
 .project-case-study > .project-evidence {
   margin-top: 1.5rem;
 }
