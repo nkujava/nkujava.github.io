@@ -97,11 +97,11 @@ body:has(input[name="section"][value="projects"]:checked):has(input[name="projec
 
 /* Exact 3px scrollbar in Chrome, Edge, and Safari; thin fallback elsewhere. */
 @supports selector(::-webkit-scrollbar) {
-  main, .sidebar {
+  main {
     scrollbar-width: auto;
   }
 
-  main::-webkit-scrollbar, .sidebar::-webkit-scrollbar {
+  main::-webkit-scrollbar {
     width: 3px;
     height: 3px;
   }
@@ -124,17 +124,9 @@ body:has(input[name="section"][value="projects"]:checked):has(input[name="projec
   grid-area: sidebar;
   min-width: 0;
   align-self: start;
-  /* Allow access to every contact link on short screens or at large text sizes. */
+  /* Keep the left panel stationary without creating a scroll container. */
   max-height: 100%;
-  overflow-y: auto;
-  scrollbar-width: thin;
-}
-
-@supports selector(::-webkit-scrollbar) {
-  .sidebar { scrollbar-width: auto; }
-  .sidebar::-webkit-scrollbar-thumb { background: #888; border-radius: 3px; }
-  .sidebar::-webkit-scrollbar-track { background: transparent; }
-  .sidebar::-webkit-scrollbar-button { display: none; }
+  overflow: clip;
 }
 
 .section-header {

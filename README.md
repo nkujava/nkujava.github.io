@@ -10,7 +10,7 @@ No installation, framework, or build step is required.
 The design uses traditional serif type, browser-style blue links, and compact
 sections. Desktop places the selected tab's images, videos, and captions on the
 left, with text and centered navigation on the right (a 40/60 split).
-The text and media columns scroll independently. The sand photo and contact
+Only the text column scrolls on desktop; the left media column stays fixed with no scrollbar. The sand photo and contact
 details appear on About and serve as the default for tabs without their own media.
 The plain underlined section controls display one category at a time. They use
 native radio controls: Tab to the selected category, then use arrow keys to switch.
