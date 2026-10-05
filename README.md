@@ -20,8 +20,8 @@ returns the desktop content column to the top when switching projects.
 Without JavaScript, section and project selection still work, but the selected
 project persists when returning to Projects.
 Research & Experience combines the research and experience entries, with subtabs
-for Wisconsin Autonomous, People and Robots, and Rosenberg Lab. It defaults to
-Wisconsin Autonomous whenever opened. Publications appear with People and Robots.
+for People and Robots, Rosenberg Lab, and Wisconsin Autonomous. It defaults to
+People and Robots whenever opened. Publications appear with People and Robots.
 Use Tab and arrow keys for these controls; without JavaScript, the selected
 subtab persists when returning to Research & Experience.
 The left column can scroll if needed on short screens to keep contact links

@@ -43,9 +43,9 @@
       </fieldset>
       <fieldset class="section-tabs experience-tabs">
         <legend>Browse research and experience</legend>
-        <label><input type="radio" name="affiliation" value="wa" aria-controls="wa-experience" checked>Wisconsin Autonomous</label>
-        <label><input type="radio" name="affiliation" value="people-robots" aria-controls="people-robots-research writing">People and Robots</label>
+        <label><input type="radio" name="affiliation" value="people-robots" aria-controls="people-robots-research writing" checked>People and Robots</label>
         <label><input type="radio" name="affiliation" value="rosenberg" aria-controls="rosenberg-research">Rosenberg Lab</label>
+        <label><input type="radio" name="affiliation" value="wa" aria-controls="wa-experience">Wisconsin Autonomous</label>
       </fieldset>
       <fieldset class="section-tabs project-tabs">
         <legend>Browse projects</legend>
@@ -487,7 +487,7 @@
     projectsTab.addEventListener('change', resetProjects);
     const experienceTab = document.querySelector('input[name="section"][value="experience"]');
     function resetExperience() {
-      document.querySelector('input[name="affiliation"][value="wa"]').checked = true;
+      document.querySelector('input[name="affiliation"][value="people-robots"]').checked = true;
       main.scrollTop = 0;
     }
     experienceTab.addEventListener('click', resetExperience);
