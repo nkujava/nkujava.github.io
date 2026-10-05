@@ -65,7 +65,8 @@ save, and refresh your browser. Updating the PDF does not automatically update
 the HTML, or vice versa.
 
 1. **About and Education:** introduction and skills are in `ABOUT` and `SKILLS`.
-   The separate Education tab contains `EDUCATION`, with Madison details ready
+   The separate Education tab has Madison and PKU subtabs, resetting to Madison
+   whenever opened. It contains `EDUCATION`, with Madison details ready
    to expand and a PKU summer-program overview linked to the official curriculum.
    Keep published program offerings distinct from personal activities and accomplishments.
    The page title and meta description are in the `<head>`.

@@ -189,7 +189,13 @@ main:not(:has(input[name="affiliation"][value="people-robots"]:checked)) #writin
   display: none;
 }
 
-#projects > article, #experience > article {
+main:not(:has(input[name="section"][value="education"]:checked)) .education-tabs,
+main:has(input[name="school"][value="madison"]:checked) #pku-education,
+main:has(input[name="school"][value="pku"]:checked) #madison-education {
+  display: none;
+}
+
+#projects > article, #experience > article, #education > article {
   margin-top: 0;
 }
 

@@ -42,6 +42,11 @@
         <label><input type="radio" name="section" value="experience" aria-controls="experience">Research &amp; Experience</label>
         <label><input type="radio" name="section" value="projects" aria-controls="projects">Projects</label>
       </fieldset>
+      <fieldset class="section-tabs education-tabs">
+        <legend>Browse education</legend>
+        <label><input type="radio" name="school" value="madison" aria-controls="madison-education" checked>Madison</label>
+        <label><input type="radio" name="school" value="pku" aria-controls="pku-education">PKU</label>
+      </fieldset>
       <fieldset class="section-tabs experience-tabs">
         <legend>Browse research and experience</legend>
         <label><input type="radio" name="affiliation" value="people-robots" aria-controls="people-robots-research writing" checked>People and Robots</label>
@@ -81,7 +86,7 @@
     <!-- EDUCATION: expand the Madison entry when additional details are supplied. -->
     <section id="education" aria-labelledby="education-heading">
       <h2 id="education-heading">Education</h2>
-      <article>
+      <article id="madison-education">
         <h3>University of Wisconsin</h3>
         <p class="details">Madison, WI ? September 2024 ? expected May 2028</p>
         <p>B.S. in Computer Science &amp; Psychology.</p>
@@ -91,7 +96,7 @@
         </p>
         <!-- Add personal academic interests, coursework details, and experiences here. -->
       </article>
-      <article class="education-case-study">
+      <article id="pku-education" class="education-case-study">
         <h3>Peking University</h3>
         <p class="details">Beijing, China ? Summer 2025</p>
         <p><strong>Advanced Topics in Computer Science</strong></p>
@@ -525,7 +530,14 @@
     }
     experienceTab.addEventListener('click', resetExperience);
     experienceTab.addEventListener('change', resetExperience);
-    document.querySelectorAll('input[name="project"], input[name="affiliation"]').forEach(input => {
+    const educationTab = document.querySelector('input[name="section"][value="education"]');
+    function resetEducation() {
+      document.querySelector('input[name="school"][value="madison"]').checked = true;
+      main.scrollTop = 0;
+    }
+    educationTab.addEventListener('click', resetEducation);
+    educationTab.addEventListener('change', resetEducation);
+    document.querySelectorAll('input[name="project"], input[name="affiliation"], input[name="school"]').forEach(input => {
       input.addEventListener('change', () => { main.scrollTop = 0; });
     });
   </script>
