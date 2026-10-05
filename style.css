@@ -177,7 +177,14 @@ main:has(input[name="project"][value="simulator"]:checked) #projects > article:n
   display: none;
 }
 
-#projects > article {
+main:not(:has(input[name="section"][value="research"]:checked)) .research-tabs,
+main:has(input[name="lab"][value="rosenberg"]:checked) #people-robots-research,
+main:has(input[name="lab"][value="rosenberg"]:checked) #writing,
+main:has(input[name="lab"][value="people-robots"]:checked) #rosenberg-research {
+  display: none;
+}
+
+#projects > article, #research > article {
   margin-top: 0;
 }
 

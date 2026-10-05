@@ -42,6 +42,11 @@
         <label><input type="radio" name="section" value="experience" aria-controls="experience">Experience</label>
         <label><input type="radio" name="section" value="projects" aria-controls="projects">Projects</label>
       </fieldset>
+      <fieldset class="section-tabs research-tabs">
+        <legend>Browse research labs</legend>
+        <label><input type="radio" name="lab" value="rosenberg" aria-controls="rosenberg-research" checked>Rosenberg Lab</label>
+        <label><input type="radio" name="lab" value="people-robots" aria-controls="people-robots-research writing">People and Robots</label>
+      </fieldset>
       <fieldset class="section-tabs project-tabs">
         <legend>Browse projects</legend>
         <label><input type="radio" name="project" value="localization" aria-controls="localization-project" checked>Localization</label>
@@ -90,7 +95,7 @@
     <!-- RESEARCH: duplicate an article to add an entry. Add links when available. -->
     <section id="research" aria-labelledby="research-heading">
       <h2 id="research-heading">Research &amp; Writing</h2>
-      <article>
+      <article id="rosenberg-research">
         <h3>Rosenberg Lab</h3>
         <p class="details">Undergraduate Researcher · Madison, WI<br>September 2026 – Present</p>
         <p>
@@ -105,7 +110,7 @@
           collection to distinguish neurodiverse behavioral subgroups.
         </p>
       </article>
-      <article class="research-case-study">
+      <article id="people-robots-research" class="research-case-study">
         <h3>People and Robots Laboratory</h3>
         <p class="details">Undergraduate Research Assistant · Madison, WI<br>April 2026 – Present</p>
         <p>
@@ -475,7 +480,7 @@
   </main>
 
 
-  <!-- Reset the project selection whenever Projects is opened. -->
+  <!-- Reset each nested selection whenever its parent section is opened. -->
   <script>
     const main = document.querySelector('main');
     const projectsTab = document.querySelector('input[name="section"][value="projects"]');
@@ -485,7 +490,14 @@
     }
     projectsTab.addEventListener('click', resetProjects);
     projectsTab.addEventListener('change', resetProjects);
-    document.querySelectorAll('input[name="project"]').forEach(input => {
+    const researchTab = document.querySelector('input[name="section"][value="research"]');
+    function resetResearch() {
+      document.querySelector('input[name="lab"][value="rosenberg"]').checked = true;
+      main.scrollTop = 0;
+    }
+    researchTab.addEventListener('click', resetResearch);
+    researchTab.addEventListener('change', resetResearch);
+    document.querySelectorAll('input[name="project"], input[name="lab"]').forEach(input => {
       input.addEventListener('change', () => { main.scrollTop = 0; });
     });
   </script>
