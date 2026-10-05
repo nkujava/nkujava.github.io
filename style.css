@@ -1,0 +1,240 @@
+/* Traditional academic typography, using fonts already on the reader's device. */
+html {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 100%;
+  line-height: 1.4;
+  color: #000;
+  background: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0 0 0.15rem;
+  font-size: 1rem;
+}
+
+h4 {
+  margin: 0 0 0.65rem;
+  font-size: 1rem;
+}
+
+p, ul {
+  margin: 0 0 0.65rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+.details {
+  font-style: italic;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Full-width 40/60 split, with the name, photo, and contact in the left column. */
+body {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  grid-template-rows: minmax(0, 1fr);
+  grid-template-areas: "sidebar main";
+  column-gap: 2rem;
+  height: 100dvh;
+  margin: 0;
+  padding: 1.5rem 8px 2rem;
+  overflow-wrap: anywhere;
+}
+
+main {
+  grid-area: main;
+  min-width: 0;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+/* Exact 3px scrollbar in Chrome, Edge, and Safari; thin fallback elsewhere. */
+@supports selector(::-webkit-scrollbar) {
+  main {
+    scrollbar-width: auto;
+  }
+
+  main::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+
+  main::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  main::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+  }
+
+  main::-webkit-scrollbar-button {
+    display: none;
+  }
+}
+
+.sidebar {
+  grid-area: sidebar;
+  min-width: 0;
+  align-self: start;
+  /* Allow access to every contact link on short screens or at large text sizes. */
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.sidebar h1 {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  /* Keep Ultra HDR photo highlights at the same brightness range as page white. */
+  dynamic-range-limit: standard;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+article + article {
+  margin-top: 1rem;
+}
+
+article > :last-child, section > :last-child {
+  margin-bottom: 0;
+}
+
+/* Project evidence stays in the text column, with captions and ordinary tables. */
+.project-evidence {
+  margin-top: 1rem;
+}
+
+.project-evidence figure {
+  max-width: 720px;
+  margin: 0 0 1rem;
+}
+
+.project-evidence .trajectory-comparison {
+  max-width: 440px;
+}
+
+.project-evidence img {
+  display: block;
+  width: 100%;
+  height: auto;
+  dynamic-range-limit: standard;
+}
+
+.project-evidence iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+.project-evidence figcaption {
+  margin-top: 0.5rem;
+}
+
+.project-evidence table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0.75rem;
+}
+
+.project-evidence caption {
+  text-align: left;
+  margin-bottom: 0.35rem;
+}
+
+.project-evidence th, .project-evidence td {
+  padding: 0.35rem 0.5rem 0.35rem 0;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #ddd;
+}
+
+address ul {
+  padding: 0;
+  list-style: none;
+}
+
+address li + li {
+  margin-top: 0.3rem;
+}
+
+.sidebar section {
+  margin-bottom: 0;
+}
+
+/* Familiar browser link colors and visible keyboard focus. */
+a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid #0000ee;
+  outline-offset: 3px;
+}
+
+main:focus-visible {
+  outline: 2px solid #0000ee;
+  outline-offset: -2px;
+}
+
+/* On small screens, the profile appears first and the whole page scrolls. */
+@media (max-width: 800px) {
+  body {
+    display: block;
+    height: auto;
+    padding: 1.25rem 20px 2rem;
+  }
+
+  .sidebar {
+    margin-bottom: 1.5rem;
+  }
+
+  main, .sidebar {
+    max-height: none;
+    overflow: visible;
+  }
+}

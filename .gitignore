@@ -1,0 +1,19 @@
+# Operating system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor settings and temporary files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.tmp
+
+# Local source copies; the site uses the named images under assets/projects/.
+/image.png
+/image2.png
+
+# Unlinked resume retained locally; add explicitly if a public resume is wanted later.
+/resume.pdf
