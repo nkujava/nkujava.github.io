@@ -196,6 +196,25 @@ article > :last-child, section > :last-child {
   margin-top: 1rem;
 }
 
+.project-case-study > h4,
+.project-case-study > .project-evidence {
+  margin-top: 1.5rem;
+}
+
+.video-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  padding: 1rem;
+  border: 1px solid #999;
+  text-align: center;
+}
+
+.video-placeholder p {
+  margin: 0;
+}
+
 .project-evidence figure {
   max-width: 720px;
   margin: 0 0 1rem;

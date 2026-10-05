@@ -265,34 +265,75 @@
           -->
         </section>
       </article>
-      <!-- MIDPLANNER SIMULATOR: basic environment for drafting planner logic. -->
-      <article>
-        <h3>Midplanner Algorithm Simulator</h3>
-        <p class="details">Prototype / work in progress</p>
-        <p>
-          A basic 2D simulation environment to help draft and explore the
-          midplanner algorithm. It supports generated road networks, route
-          selection, and manual vehicle control, with a visual view of the
-          vehicle and surrounding lanes.
-        </p>
-        <p>
-          A per-frame planner interface provides a place to experiment with
-          steering and speed decisions using the vehicle state and lane points.
-          The current version provides the simulation scaffolding; the planner
-          logic is still a placeholder for further development.
-        </p>
+      <!-- MIDPLANNER SIMULATOR: early planning prototype and lessons learned. -->
+      <article id="midplanner-simulator" class="project-case-study">
+        <h3>Midplanner Prototyping Simulator</h3>
+        <p class="details">Wisconsin Autonomous · Early planning prototype</p>
         <p class="details">Technologies: C++17, raylib, raygui, and CMake.</p>
-        <!-- SIMULATOR RESULTS: add a real screenshot or recording when available.
+
+        <h4>Motivation</h4>
+        <p>
+          We built this 2D simulator to explore a mid-level planning rewrite
+          while our perception stack was unavailable. Raycasting against
+          generated lane geometry gave us simulated lane detections, allowing
+          us to develop lane-following logic before integrating live perception.
+          The competition's low-speed context, approximately five miles per hour,
+          motivated a simplified speed policy rather than a detailed vehicle model.
+        </p>
+
+        <h4>My contribution</h4>
+        <p>
+          I developed the mid-level planning and control logic. My Wisconsin
+          Autonomous teammate, [Teammate name], focused on the simulator and
+          road generation, and we worked together on the simulated high-level
+          planner. The road-generation controls let us vary the seed, grid size,
+          row and column counts, and junction probability to explore different layouts.
+        </p>
+
+        <h4>How it works</h4>
+        <p>
+          Rays cast from the simulated vehicle intersect lane markings to produce
+          lane-detection points. The midplanner uses these points to estimate a
+          lane-following heading and outputs a desired orientation and speed.
+          At intersections, where lane markings may be unavailable, it falls
+          back to the remaining high-level route to estimate the heading.
+        </p>
+        <p>
+          A line perpendicular to the vehicle's heading separates passed route
+          points from those ahead; points behind it are removed as the vehicle
+          progresses. A simplified vehicle controller directly updates heading
+          and position. In the actual vehicle system, the midplanner's desired
+          orientation and speed instead feed a downstream model predictive
+          controller (MPC).
+        </p>
+
         <section class="project-evidence" aria-labelledby="simulator-results-heading">
-          <h4 id="simulator-results-heading">Results and supporting material</h4>
+          <h4 id="simulator-results-heading">Demo</h4>
           <figure>
-            <img src="assets/projects/midplanner-simulator.png"
-                 alt="[Describe the generated road network, selected route, and vehicle position.]"
-                 loading="lazy">
-            <figcaption>[Describe the scenario and whether control is manual or uses a draft planner.]</figcaption>
+            <!-- SIMULATOR RESULTS: replace this placeholder with the recorded video.
+                 Use a native video element with controls for a local MP4, or a
+                 titled iframe for a hosted video. Update the caption to match. -->
+            <div class="video-placeholder">
+              <p>Simulator demonstration — video coming soon</p>
+            </div>
+            <figcaption>
+              The planned recording will demonstrate this early planning iteration.
+              The triangle represents the vehicle; red and green distinguish lane
+              markings, blue marks intersection geometry, and the dots show where
+              the cast rays intersect lane markings.
+            </figcaption>
           </figure>
         </section>
-        -->
+
+        <h4>Lessons learned</h4>
+        <p>
+          The simulator let us explore planning ideas without waiting for perception.
+          Our early state/behavior-based approach became increasingly complicated
+          as we added driving cases and transitions. We ultimately chose a different
+          final planning algorithm, but this iteration helped us examine the handoff
+          between lane following and route-based guidance. It documents a prototyping
+          step, rather than validation of the final vehicle planner.
+        </p>
       </article>
     </section>
 
