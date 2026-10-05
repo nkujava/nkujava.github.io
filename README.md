@@ -82,9 +82,8 @@ the HTML, or vice versa.
 4. **Publications / Writing (inside People and Robots):** the CHI 2027 paper is described as submitted.
    Add its title, authors, and public link when available, and update its status
    if it changes. A citation template is provided in an HTML comment.
-5. **Contact:** email is displayed as `[first name]kujava@gmail.com`, with no
-   `mailto:` link or complete address in the HTML. This discourages simple
-   harvesting but does not guarantee protection against scraping.
+5. **Contact:** email is displayed in full as `nathankujava@gmail.com`.
+   Update it in the Contact section when needed.
 6. **Profiles:** the left Contact section links only to
    `linkedin.com/in/nathan-kujava-180a94351/`. Update it there if the profile URL changes.
 7. **Resume:** replace the private local `resume.pdf` when you have a new version.
