@@ -67,7 +67,8 @@ written directly in `index.html`, so you can open it in a text editor, make chan
 save, and refresh your browser. Updating the PDF does not automatically update
 the HTML, or vice versa.
 
-1. **About and Education:** introduction and skills are in `ABOUT` and `SKILLS`.
+1. **About and Education:** the personal introduction is in `ABOUT`. Keep detailed
+   technologies with their project entries and degree dates in Education.
    The separate Education tab has Madison and PKU subtabs, resetting to Madison
    whenever opened. It contains `EDUCATION`, with Madison details ready
    to expand and a PKU summer-program overview linked to the official curriculum.
