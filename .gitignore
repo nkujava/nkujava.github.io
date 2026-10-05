@@ -15,5 +15,5 @@ Desktop.ini
 /image.png
 /image2.png
 
-# Unlinked resume retained locally; add explicitly if a public resume is wanted later.
+# Private resume retained locally; requests are handled by email.
 /resume.pdf

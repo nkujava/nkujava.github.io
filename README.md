@@ -25,7 +25,7 @@ Website/
 ├── style.css    # Typography, spacing, link states, and responsive layout
 ├── README.md    # Editing and publishing instructions
 ├── PXL_20260824_014411149.jpg  # Photo above the contact details
-├── resume.pdf   # Local resume PDF, excluded from publication
+├── resume.pdf   # Private local copy, ignored by Git and not published
 ├── .nojekyll    # Serve the static website without Jekyll processing
 ├── assets/projects/  # Localization comparison image; add other plots and data here
 └── .gitignore   # Common OS and editor temporary files
@@ -40,10 +40,11 @@ replace it, update the image filename, descriptive `alt` text, and intrinsic
 `width` / `height` in the HTML's `PHOTO` comment block. Include the image file
 when committing and pushing the website.
 
-The local `resume.pdf` beside `index.html` was copied from the supplied
-`Nathan_Kujava_Resume.pdf`. It is ignored by Git and is not published; the page
-currently has no Resume link. To update the local copy, replace `resume.pdf`
-with your latest PDF, keeping the same lowercase filename.
+The `resume.pdf` beside `index.html` is a private local copy of the supplied
+`Nathan_Kujava_Resume.pdf`. It is ignored by Git and is not published.
+The left Contact section has a “Request resume by email” link that opens an
+email to Nathan with the subject “Resume request.” Share the PDF directly
+with people who request it.
 
 ## Edit your information
 
@@ -66,9 +67,8 @@ the HTML, or vice versa.
    and the `mailto:` destination if it changes.
 6. **Profiles:** the left Contact section links to `github.com/nkujava` and
    `linkedin.com/in/nathan-kujava-180a94351/`. Update them there if a profile URL changes.
-7. **Resume:** replace the local `resume.pdf` when you have a new version. If you
-   want to publish it later, review it for public sharing, remove `/resume.pdf`
-   from `.gitignore`, and add `<a href="resume.pdf">Resume (PDF)</a>` where desired.
+7. **Resume:** replace the private local `resume.pdf` when you have a new version.
+   Keep it out of Git; the sidebar provides an email request link rather than a download.
 
 The citation and project evidence templates contain bracketed examples and
 placeholder paths inside HTML comments; these are not displayed on the page.
@@ -124,7 +124,7 @@ for embedding restrictions and missing-referrer error 153.
   the details. Clearly distinguish submitted work from accepted or published work.
 - Add only the profile, project, and paper links you have available.
 - Adjust fonts, width, colors, and spacing in `style.css`. Local file links
-  should stay relative (for example, `resume.pdf`, not `/resume.pdf`) so they
+  should stay relative (for example, `assets/projects/plot.png`) so they
   work both from disk and from a GitHub Pages project subdirectory.
 - The initials favicon is an inline SVG in the HTML head; no image file is needed.
 
