@@ -94,12 +94,12 @@ placeholder paths inside HTML comments; these are not displayed on the page.
 
 ## Update reading notes
 
-Find the `READING` comment in `index.html`. When you have an entry, remove the
-"Reading notes coming soon." paragraph and uncomment the `reading-list` list.
-Replace the bracketed title, URL, and personal note, then duplicate its `<li>`
-for additional entries. Keep up to three short entries, newest first, so the
-fixed sidebar remains compact. The reading section appears with the default
-photo and contact panel. No API keys, external service, or build step is needed.
+Find the `READING` comment in `index.html`. Each `<li>` in `reading-list`
+contains a linked title. Replace its title and URL, or duplicate the entry.
+Optionally add a `<p>` inside the entry with one sentence about what interested
+you. Keep up to three short entries so the fixed sidebar remains compact.
+The reading section appears with the default photo and contact panel.
+No API keys, external service, or build step is needed.
 
 ## Add project images, videos, and data
 
