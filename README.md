@@ -83,7 +83,7 @@ Each project has a **Results and supporting material** subsection. Search for
 The simulator case study embeds the YouTube recording `YoG1P2SROU0` under Demo.
 At `SIMULATOR RESULTS`, update both the iframe source and the direct YouTube link
 when replacing the recording. The player uses the shared responsive video styling.
-Replace `[Teammate name]` in the contribution paragraph when the credit is supplied.
+The contribution paragraph credits Adrian Luo for the simulator and road generation.
 
 1. Put your screenshots, plots, CSV files, or PDF reports in `assets/projects/`.
    Use simple filenames such as `localization-trajectory.png` or
