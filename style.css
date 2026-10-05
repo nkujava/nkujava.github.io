@@ -86,12 +86,12 @@ main {
 .media-panel { display: none; }
 
 body:has(input[name="section"][value="about"]:checked) #about-media,
-body:has(input[name="section"][value="projects"]:checked):has(input[name="project"][value="simulator"]:checked) #about-media,
 body:has(input[name="section"][value="experience"]:checked) #about-media,
 body:has(input[name="section"][value="education"]:checked):has(input[name="school"][value="madison"]:checked) #about-media,
 body:has(input[name="section"][value="education"]:checked):has(input[name="school"][value="pku"]:checked) #pku-media,
 body:has(input[name="section"][value="projects"]:checked):has(input[name="project"][value="localization"]:checked) #localization-media,
-body:has(input[name="section"][value="projects"]:checked):has(input[name="project"][value="planner"]:checked) #planner-media {
+body:has(input[name="section"][value="projects"]:checked):has(input[name="project"][value="planner"]:checked) #planner-media,
+body:has(input[name="section"][value="projects"]:checked):has(input[name="project"][value="simulator"]:checked) #simulator-media {
   display: block;
 }
 
