@@ -80,6 +80,7 @@ main {
   min-height: 0;
   overflow-y: auto;
   scrollbar-width: thin;
+  scrollbar-gutter: stable both-edges;
 }
 
 /* Exact 3px scrollbar in Chrome, Edge, and Safari; thin fallback elsewhere. */
@@ -129,10 +130,13 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-inline-size: 0;
   gap: 0.5rem 1.25rem;
   border: 0;
   padding: 0;
-  margin: 1rem 0 0;
+  margin: 1rem auto 0;
 }
 
 .section-tabs legend,
