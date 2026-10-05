@@ -38,14 +38,14 @@
       <fieldset class="section-tabs">
         <legend>Browse sections</legend>
         <label><input type="radio" name="section" value="about" aria-controls="about" checked>About</label>
-        <label><input type="radio" name="section" value="research" aria-controls="research">Research &amp; Writing</label>
-        <label><input type="radio" name="section" value="experience" aria-controls="experience">Experience</label>
+        <label><input type="radio" name="section" value="experience" aria-controls="experience">Research &amp; Experience</label>
         <label><input type="radio" name="section" value="projects" aria-controls="projects">Projects</label>
       </fieldset>
-      <fieldset class="section-tabs research-tabs">
-        <legend>Browse research labs</legend>
-        <label><input type="radio" name="lab" value="people-robots" aria-controls="people-robots-research writing" checked>People and Robots</label>
-        <label><input type="radio" name="lab" value="rosenberg" aria-controls="rosenberg-research">Rosenberg Lab</label>
+      <fieldset class="section-tabs experience-tabs">
+        <legend>Browse research and experience</legend>
+        <label><input type="radio" name="affiliation" value="wa" aria-controls="wa-experience" checked>Wisconsin Autonomous</label>
+        <label><input type="radio" name="affiliation" value="people-robots" aria-controls="people-robots-research writing">People and Robots</label>
+        <label><input type="radio" name="affiliation" value="rosenberg" aria-controls="rosenberg-research">Rosenberg Lab</label>
       </fieldset>
       <fieldset class="section-tabs project-tabs">
         <legend>Browse projects</legend>
@@ -92,9 +92,32 @@
       </ul>
     </section>
 
-    <!-- RESEARCH: duplicate an article to add an entry. Add links when available. -->
-    <section id="research" aria-labelledby="research-heading">
-      <h2 id="research-heading">Research &amp; Writing</h2>
+    <!-- RESEARCH AND EXPERIENCE: one article per affiliation; writing accompanies People and Robots. -->
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Research &amp; Experience</h2>
+      <article id="wa-experience">
+        <h3>Wisconsin Autonomous — SAE AutoDrive / EcoCAR</h3>
+        <p class="details">
+          Infrastructure Team Member; Team Lead since September 2026 · Madison, WI<br>
+          September 2024 – Present
+        </p>
+        <ul>
+          <li>
+            Interviewed, selected, and onboarded more than 10 team members,
+            introducing them to team workflows, in-house tools, and
+            cross-functional collaboration with other sub-teams.
+          </li>
+          <li>
+            Developed localization and path-planning nodes for a Level 4
+            autonomous vehicle that placed 2nd overall in Year 5 of the
+            SAE AutoDrive Challenge II.
+          </li>
+          <li>
+            Contributing to the migration of the autonomy stack to the
+            Chevrolet Blazer for the EcoCAR Innovation Challenge.
+          </li>
+        </ul>
+      </article>
       <article id="rosenberg-research">
         <h3>Rosenberg Lab</h3>
         <p class="details">Undergraduate Researcher · Madison, WI<br>September 2026 – Present</p>
@@ -178,34 +201,6 @@
         </ul>
         -->
       </section>
-    </section>
-
-    <!-- EXPERIENCE: duplicate an article to add an entry. -->
-    <section id="experience" aria-labelledby="experience-heading">
-      <h2 id="experience-heading">Experience</h2>
-      <article>
-        <h3>Wisconsin Autonomous — SAE AutoDrive / EcoCAR</h3>
-        <p class="details">
-          Infrastructure Team Member; Team Lead since September 2026 · Madison, WI<br>
-          September 2024 – Present
-        </p>
-        <ul>
-          <li>
-            Interviewed, selected, and onboarded more than 10 team members,
-            introducing them to team workflows, in-house tools, and
-            cross-functional collaboration with other sub-teams.
-          </li>
-          <li>
-            Developed localization and path-planning nodes for a Level 4
-            autonomous vehicle that placed 2nd overall in Year 5 of the
-            SAE AutoDrive Challenge II.
-          </li>
-          <li>
-            Contributing to the migration of the autonomy stack to the
-            Chevrolet Blazer for the EcoCAR Innovation Challenge.
-          </li>
-        </ul>
-      </article>
     </section>
 
     <!-- PROJECTS: duplicate an article to add an entry. -->
@@ -490,14 +485,14 @@
     }
     projectsTab.addEventListener('click', resetProjects);
     projectsTab.addEventListener('change', resetProjects);
-    const researchTab = document.querySelector('input[name="section"][value="research"]');
-    function resetResearch() {
-      document.querySelector('input[name="lab"][value="people-robots"]').checked = true;
+    const experienceTab = document.querySelector('input[name="section"][value="experience"]');
+    function resetExperience() {
+      document.querySelector('input[name="affiliation"][value="wa"]').checked = true;
       main.scrollTop = 0;
     }
-    researchTab.addEventListener('click', resetResearch);
-    researchTab.addEventListener('change', resetResearch);
-    document.querySelectorAll('input[name="project"], input[name="lab"]').forEach(input => {
+    experienceTab.addEventListener('click', resetExperience);
+    experienceTab.addEventListener('change', resetExperience);
+    document.querySelectorAll('input[name="project"], input[name="affiliation"]').forEach(input => {
       input.addEventListener('change', () => { main.scrollTop = 0; });
     });
   </script>

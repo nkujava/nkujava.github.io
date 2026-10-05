@@ -19,10 +19,11 @@ Projects to Localization whenever the main Projects control is activated and
 returns the desktop content column to the top when switching projects.
 Without JavaScript, section and project selection still work, but the selected
 project persists when returning to Projects.
-Research & Writing similarly has People and Robots and Rosenberg Lab subtabs,
-defaulting to People and Robots whenever the parent section is opened. The publications
-section appears with People and Robots. Use Tab and arrow keys for these controls;
-without JavaScript, the selected lab persists when returning to Research & Writing.
+Research & Experience combines the research and experience entries, with subtabs
+for Wisconsin Autonomous, People and Robots, and Rosenberg Lab. It defaults to
+Wisconsin Autonomous whenever opened. Publications appear with People and Robots.
+Use Tab and arrow keys for these controls; without JavaScript, the selected
+subtab persists when returning to Research & Experience.
 The left column can scroll if needed on short screens to keep contact links
 accessible. On smaller screens, the page scrolls normally in a single column,
 with the photo and contact appearing before the name and tabbed content.
@@ -71,7 +72,7 @@ the HTML, or vice versa.
 3. **Projects and experience:** edit the localization, mid-level planner, and
    midplanner simulator projects and the
    Wisconsin Autonomous role. Add real repository or project links when available.
-4. **Publications / Writing (inside Research & Writing):** the CHI 2027 paper is described as submitted.
+4. **Publications / Writing (inside People and Robots):** the CHI 2027 paper is described as submitted.
    Add its title, authors, and public link when available, and update its status
    if it changes. A citation template is provided in an HTML comment.
 5. **Contact:** email is displayed as `[first name]kujava@gmail.com`, with no

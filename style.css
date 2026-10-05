@@ -168,7 +168,6 @@ main {
 }
 
 main:has(input[value="about"]:checked) > section:not(#about),
-main:has(input[value="research"]:checked) > section:not(#research),
 main:has(input[value="experience"]:checked) > section:not(#experience),
 main:has(input[value="projects"]:checked) > section:not(#projects) {
   display: none;
@@ -181,14 +180,15 @@ main:has(input[name="project"][value="simulator"]:checked) #projects > article:n
   display: none;
 }
 
-main:not(:has(input[name="section"][value="research"]:checked)) .research-tabs,
-main:has(input[name="lab"][value="rosenberg"]:checked) #people-robots-research,
-main:has(input[name="lab"][value="rosenberg"]:checked) #writing,
-main:has(input[name="lab"][value="people-robots"]:checked) #rosenberg-research {
+main:not(:has(input[name="section"][value="experience"]:checked)) .experience-tabs,
+main:has(input[name="affiliation"][value="wa"]:checked) #experience > article:not(#wa-experience),
+main:has(input[name="affiliation"][value="people-robots"]:checked) #experience > article:not(#people-robots-research),
+main:has(input[name="affiliation"][value="rosenberg"]:checked) #experience > article:not(#rosenberg-research),
+main:not(:has(input[name="affiliation"][value="people-robots"]:checked)) #writing {
   display: none;
 }
 
-#projects > article, #research > article {
+#projects > article, #experience > article {
   margin-top: 0;
 }
 
