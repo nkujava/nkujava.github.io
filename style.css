@@ -170,6 +170,17 @@ main:has(input[value="projects"]:checked) > section:not(#projects) {
   display: none;
 }
 
+main:not(:has(input[name="section"][value="projects"]:checked)) .project-tabs,
+main:has(input[name="project"][value="localization"]:checked) #projects > article:not(#localization-project),
+main:has(input[name="project"][value="planner"]:checked) #projects > article:not(#planner-project),
+main:has(input[name="project"][value="simulator"]:checked) #projects > article:not(#midplanner-simulator) {
+  display: none;
+}
+
+#projects > article {
+  margin-top: 0;
+}
+
 .sidebar img {
   display: block;
   width: 100%;

@@ -4,8 +4,8 @@ Site URL: https://nkujava.github.io/
 
 Repository: https://github.com/nkujava/nkujava.github.io
 
-A single-page academic homepage made with plain HTML and CSS. No installation,
-JavaScript, framework, or build step is required.
+A single-page academic homepage made with HTML, CSS, and a small inline script.
+No installation, framework, or build step is required.
 
 The design uses traditional serif type, browser-style blue links, and compact
 sections. Desktop uses a full-width, proportional 40/60 split: photo and contact
@@ -13,7 +13,12 @@ information on the left, with the name centered above section tabs on the right.
 The right column scrolls independently while the left column stays in place.
 The plain underlined section controls display one category at a time. They use
 native radio controls: Tab to the selected category, then use arrow keys to switch.
-No JavaScript is needed.
+Projects has a second row of controls for Localization, Mid-Level Planner, and
+Simulator, visible only while Projects is selected. The inline script resets
+Projects to Localization whenever the main Projects control is activated and
+returns the desktop content column to the top when switching projects.
+Without JavaScript, section and project selection still work, but the selected
+project persists when returning to Projects.
 The left column can scroll if needed on short screens to keep contact links
 accessible. On smaller screens, the page scrolls normally in a single column,
 with the photo and contact appearing before the name and tabbed content.

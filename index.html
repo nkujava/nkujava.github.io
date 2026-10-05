@@ -42,6 +42,12 @@
         <label><input type="radio" name="section" value="experience" aria-controls="experience">Experience</label>
         <label><input type="radio" name="section" value="projects" aria-controls="projects">Projects</label>
       </fieldset>
+      <fieldset class="section-tabs project-tabs">
+        <legend>Browse projects</legend>
+        <label><input type="radio" name="project" value="localization" aria-controls="localization-project" checked>Localization</label>
+        <label><input type="radio" name="project" value="planner" aria-controls="planner-project">Mid-Level Planner</label>
+        <label><input type="radio" name="project" value="simulator" aria-controls="midplanner-simulator">Simulator</label>
+      </fieldset>
     </header>
     <!-- ABOUT -->
     <section id="about" aria-labelledby="about-heading">
@@ -163,7 +169,7 @@
     <!-- PROJECTS: duplicate an article to add an entry. -->
     <section id="projects" aria-labelledby="projects-heading">
       <h2 id="projects-heading">Projects</h2>
-      <article>
+      <article id="localization-project">
         <h3>Autonomous Vehicle Localization</h3>
         <p class="details">Wisconsin Autonomous</p>
         <p>
@@ -216,7 +222,7 @@
           -->
         </section>
       </article>
-      <article>
+      <article id="planner-project">
         <h3>Autonomous Vehicle Mid-Level Planner</h3>
         <p class="details">Wisconsin Autonomous</p>
         <p>
@@ -348,5 +354,19 @@
   </main>
 
 
+  <!-- Reset the project selection whenever Projects is opened. -->
+  <script>
+    const main = document.querySelector('main');
+    const projectsTab = document.querySelector('input[name="section"][value="projects"]');
+    function resetProjects() {
+      document.querySelector('input[name="project"][value="localization"]').checked = true;
+      main.scrollTop = 0;
+    }
+    projectsTab.addEventListener('click', resetProjects);
+    projectsTab.addEventListener('change', resetProjects);
+    document.querySelectorAll('input[name="project"]').forEach(input => {
+      input.addEventListener('change', () => { main.scrollTop = 0; });
+    });
+  </script>
 </body>
 </html>
