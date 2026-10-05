@@ -52,7 +52,7 @@ address {
   font-style: normal;
 }
 
-/* Full-width 40/60 split, with the name, photo, and contact in the left column. */
+/* Full-width 40/60 split, with photo and contact in the left column. */
 body {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
@@ -107,8 +107,58 @@ main {
   overflow-y: auto;
 }
 
-.sidebar h1 {
-  margin-bottom: 1.5rem;
+.section-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding-bottom: 1rem;
+  background: #fff;
+  text-align: center;
+}
+
+.section-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+  border: 0;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.section-tabs legend,
+.section-tabs input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.section-tabs label {
+  padding: 0.25rem 0;
+  color: #0000ee;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.section-tabs label:has(:checked) {
+  color: #000;
+  font-weight: bold;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3rem;
+}
+
+.section-tabs label:has(:focus-visible) {
+  outline: 2px solid #0000ee;
+  outline-offset: 3px;
+}
+
+main:has(input[value="about"]:checked) > section:not(#about),
+main:has(input[value="research"]:checked) > section:not(#research),
+main:has(input[value="experience"]:checked) > section:not(#experience),
+main:has(input[value="projects"]:checked) > section:not(#projects) {
+  display: none;
 }
 
 .sidebar img {

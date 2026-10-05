@@ -8,12 +8,15 @@ A single-page academic homepage made with plain HTML and CSS. No installation,
 JavaScript, framework, or build step is required.
 
 The design uses traditional serif type, browser-style blue links, and compact
-sections. Desktop uses a full-width, proportional 40/60 split: the name, photo,
-and contact information on the left and main text on the right. The right column
-scrolls independently while the left column stays in place.
+sections. Desktop uses a full-width, proportional 40/60 split: photo and contact
+information on the left, with the name centered above section tabs on the right.
+The right column scrolls independently while the left column stays in place.
+The plain underlined section controls display one category at a time. They use
+native radio controls: Tab to the selected category, then use arrow keys to switch.
+No JavaScript is needed.
 The left column can scroll if needed on short screens to keep contact links
 accessible. On smaller screens, the page scrolls normally in a single column,
-with the name, photo, and contact appearing before the main content.
+with the photo and contact appearing before the name and tabbed content.
 The visual references are [Isabella Scott's homepage](https://people.math.wisc.edu/~iscott6/)
 and [Zev Chonoles's academic website guide](https://math.uchicago.edu/~chonoles/miscellany/making-a-website/).
 
@@ -58,7 +61,7 @@ the HTML, or vice versa.
    include your roles, dates, and research contributions.
 3. **Projects and experience:** edit the two autonomous vehicle projects and
    Wisconsin Autonomous role. Add real repository or project links when available.
-4. **Publications / Writing:** the CHI 2027 paper is described as submitted.
+4. **Publications / Writing (inside Research & Writing):** the CHI 2027 paper is described as submitted.
    Add its title, authors, and public link when available, and update its status
    if it changes. A citation template is provided in an HTML comment.
 5. **Contact:** email is displayed as `[first name]kujava@gmail.com`, with no

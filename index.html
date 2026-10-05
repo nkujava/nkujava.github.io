@@ -10,9 +10,8 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='white'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-size='19' fill='%23242424'%3ENK%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-  <!-- LEFT COLUMN: name, photo, and contact links stay in place on desktop. -->
+  <!-- LEFT COLUMN: photo and contact links stay in place on desktop. -->
   <aside class="sidebar" aria-labelledby="name-heading">
-    <h1 id="name-heading">Nathan Kujava</h1>
     <!-- PHOTO: replace the filename and alt text here to use a different image. -->
     <img
       src="PXL_20260824_014411149.jpg"
@@ -33,6 +32,17 @@
 
   <!-- Independently scrollable on desktop; keyboard users can focus this region. -->
   <main tabindex="0" aria-label="Academic background and experience">
+    <header class="section-header">
+      <h1 id="name-heading">Nathan Kujava</h1>
+      <!-- Native radio controls support Tab and arrow keys without JavaScript. -->
+      <fieldset class="section-tabs">
+        <legend>Browse sections</legend>
+        <label><input type="radio" name="section" value="about" aria-controls="about" checked>About</label>
+        <label><input type="radio" name="section" value="research" aria-controls="research">Research &amp; Writing</label>
+        <label><input type="radio" name="section" value="experience" aria-controls="experience">Experience</label>
+        <label><input type="radio" name="section" value="projects" aria-controls="projects">Projects</label>
+      </fieldset>
+    </header>
     <!-- ABOUT -->
     <section id="about" aria-labelledby="about-heading">
       <h2 id="about-heading">About Me</h2>
@@ -73,7 +83,7 @@
 
     <!-- RESEARCH: duplicate an article to add an entry. Add links when available. -->
     <section id="research" aria-labelledby="research-heading">
-      <h2 id="research-heading">Research</h2>
+      <h2 id="research-heading">Research &amp; Writing</h2>
       <article>
         <h3>Rosenberg Lab</h3>
         <p class="details">Undergraduate Researcher · Madison, WI<br>September 2026 – Present</p>
@@ -102,6 +112,24 @@
           CHI 2027 Papers track.
         </p>
       </article>
+
+      <!-- PUBLICATIONS / WRITING -->
+      <section id="writing" aria-labelledby="writing-heading">
+        <h3 id="writing-heading">Publications / Writing</h3>
+        <p>
+          Co-author of a human–robot interaction paper submitted to the
+          CHI 2027 Papers track.
+        </p>
+        <!-- Submitted, not accepted. Add the title, author list, and public link when available.
+        Replace the paragraph above with a citation list like this:
+        <ul>
+          <li>
+            [Authors]. <a href="https://example.com/paper">[Title]</a>.
+            <cite>[Journal, conference, or publication]</cite>, [Year].
+          </li>
+        </ul>
+        -->
+      </section>
     </section>
 
     <!-- EXPERIENCE: duplicate an article to add an entry. -->
@@ -239,23 +267,7 @@
       </article>
     </section>
 
-    <!-- PUBLICATIONS / WRITING -->
-    <section id="writing" aria-labelledby="writing-heading">
-      <h2 id="writing-heading">Publications / Writing</h2>
-      <p>
-        Co-author of a human–robot interaction paper submitted to the
-        CHI 2027 Papers track.
-      </p>
-      <!-- Submitted, not accepted. Add the title, author list, and public link when available.
-      Replace the paragraph above with a citation list like this:
-      <ul>
-        <li>
-          [Authors]. <a href="https://example.com/paper">[Title]</a>.
-          <cite>[Journal, conference, or publication]</cite>, [Year].
-        </li>
-      </ul>
-      -->
-    </section>
+
 
   </main>
 
