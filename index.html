@@ -6,45 +6,28 @@
   <title>Nathan Kujava | Computer Science &amp; Psychology</title>
   <meta name="description" content="Nathan Kujava studies Computer Science and Psychology at the University of Wisconsin, with work in robotics, autonomous vehicles, neural encoding, and human–robot interaction.">
   <link rel="stylesheet" href="style.css">
-  <!-- Optional: replace this self-contained initials favicon with your own. -->
+
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='white'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-size='19' fill='%23242424'%3ENK%3C/text%3E%3C/svg%3E">
 </head>
-<body>
-
-
-  <!-- Independently scrollable on desktop; keyboard users can focus this region. -->
-  <main tabindex="0" aria-label="Academic background and experience">
-    <header class="section-header">
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner"><a class="brand" href="#top">Nathan Kujava</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu <span aria-hidden="true">☰</span></button>
+    <div class="nav-links" id="nav-links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Research</a><a href="#writing">Publications</a><a href="#education">Education</a><a href="#contact">Contact</a></div></div>
+  </nav>
+  <header class="hero" aria-labelledby="name-heading">
+    <div class="hero-content">
       <h1 id="name-heading">Nathan Kujava</h1>
-      <!-- Native radio controls support Tab and arrow keys without JavaScript. -->
-      <fieldset class="section-tabs">
-        <legend>Browse sections</legend>
-        <label><input type="radio" name="section" value="about" aria-controls="about about-media" checked>About</label>
-        <label><input type="radio" name="section" value="education" aria-controls="education">Education</label>
-        <label><input type="radio" name="section" value="experience" aria-controls="experience">Research &amp; Experience</label>
-        <label><input type="radio" name="section" value="projects" aria-controls="projects">Projects</label>
-      </fieldset>
-      <fieldset class="section-tabs education-tabs">
-        <legend>Browse education</legend>
-        <label><input type="radio" name="school" value="madison" aria-controls="madison-education" checked>University of Wisconsin</label>
-        <label><input type="radio" name="school" value="pku" aria-controls="pku-education pku-media">Peking University</label>
-      </fieldset>
-      <fieldset class="section-tabs experience-tabs">
-        <legend>Browse research and experience</legend>
-        <label><input type="radio" name="affiliation" value="people-robots" aria-controls="people-robots-research writing" checked>People and Robots</label>
-        <label><input type="radio" name="affiliation" value="rosenberg" aria-controls="rosenberg-research">Rosenberg Lab</label>
-        <label><input type="radio" name="affiliation" value="wa" aria-controls="wa-experience">Wisconsin Autonomous</label>
-      </fieldset>
-      <fieldset class="section-tabs project-tabs">
-        <legend>Browse projects</legend>
-        <label><input type="radio" name="project" value="localization" aria-controls="localization-project localization-media" checked>Localization</label>
-        <label><input type="radio" name="project" value="planner" aria-controls="planner-project planner-media">Mid-Level Planner</label>
-        <label><input type="radio" name="project" value="simulator" aria-controls="midplanner-simulator simulator-media">Simulator</label>
-      </fieldset>
-    </header>
-    <!-- ABOUT -->
-    <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">About Me</h2>
+      <p class="hero-subtitle">Computer Science &amp; Psychology</p>
+      <p class="hero-interests">Robotics <span>·</span> Autonomous systems <span>·</span> Human–robot interaction</p>
+    </div><a class="hero-scroll" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
+  </header>
+  <div class="affiliations" aria-label="Academic and research affiliations"><span>UW–Madison</span><span>Wisconsin Autonomous</span><span>People and Robots Lab</span><span>Rosenberg Lab</span></div>
+  <main id="main">
+    <section class="section about-section" id="about" aria-labelledby="about-heading"><div class="container about-grid">
+      <div class="about-photo"><img src="headshot.png" alt="Headshot of Nathan Kujava" width="946" height="968" loading="lazy"><p>Me!</p></div>
+      <div><h2 id="about-heading">About Me</h2>
       <p>
         I am studying Computer Science and Psychology at the University of
         Wisconsin&ndash;Madison. My interests include robotics, autonomous systems,
@@ -55,213 +38,12 @@
         human&ndash;robot interaction in the People and Robots Laboratory,
         and neural encoding models in the Rosenberg Lab.
       </p>
-      <div class="site-guide">
-        <h3>Around this site</h3>
-        <p>
-          <strong>If you're a recruiter,</strong> start with
-          <a href="#projects" data-section="projects">Projects</a> for what I've
-          built, my role, and examples of the work. My
-          <a href="#education" data-section="education">Education</a> section
-          covers my academic background and coursework.
-        </p>
-        <p>
-          <strong>If you're a researcher or potential collaborator,</strong>
-          <a href="#experience" data-section="experience">Research &amp; Experience</a>
-          covers my work in human&ndash;robot interaction, and computational neuroscience.
-        </p>
-        <p>
-          <strong>If you're a friend or just looking around,</strong> you can
-          browse what I've been reading or take a look at
-          my <a href="#pku-education" data-section="education" data-school="pku">summer at Peking University</a>.
-
-        </p>
-      </div>
-    </section>
-
-    <!-- EDUCATION: expand the Madison entry when additional details are supplied. -->
-    <section id="education" aria-labelledby="education-heading">
-      <h2 id="education-heading">Education</h2>
-      <article id="madison-education" class="education-case-study">
-        <h3>University of Wisconsin</h3>
-        <p class="details">Madison, WI &middot; September 2024 &ndash; expected May 2028</p>
-        <p>B.S. in Computer Science &amp; Psychology.</p>
-          <h4>Completed coursework</h4>
-          <ul>
-            <li><strong>COMP SCI 537 &mdash; Introduction to Operating Systems:</strong> Process scheduling, memory virtualization, resource management, and the interaction between software and hardware.</li>
-            <li><strong>COMP SCI 559 &mdash; Computer Graphics:</strong> Geometric transformations, rendering, animation, and representing objects and images in two and three dimensions.</li>
-            <li><strong>COMP SCI 354 &mdash; Machine Organization and Programming:</strong> C and assembly programming, memory allocation, caching, and how low-level system organization affects performance.</li>
-            <li><strong>E C E 352 &mdash; Digital System Fundamentals:</strong> Boolean logic, combinational and sequential circuits, and the building blocks of digital computer systems.</li>
-            <li><strong>COMP SCI 400 &mdash; Programming III:</strong> Trees, graphs, hash tables, complexity analysis, and building maintainable software with advanced data structures.</li>
-          </ul>
-          <h4>In progress &mdash; Fall 2026</h4>
-          <ul>
-            <li><strong>COMP SCI 580 &mdash; Intelligent Robotics:</strong> Robot perception, state estimation, motion planning, kinematics, learning, and control.</li>
-            <li><strong>COMP SCI 577 &mdash; Introduction to Algorithms:</strong> Algorithm design through greedy methods, divide-and-conquer, dynamic programming, and reasoning about computational limits.</li>
-            <li><strong>COMP SCI 620 &mdash; Computer Sciences Capstone:</strong> Team software development for a corporate client, from design through testing, documentation, and delivery.</li>
-          </ul>
-          <p class="details">
-            Course descriptions adapted from UW&ndash;Madison's
-            <a href="https://guide.wisc.edu/courses/comp_sci/">Computer Sciences catalog</a>
-            and <a href="https://guide.wisc.edu/courses/e_c_e/">Electrical and Computer Engineering catalog</a>.
-          </p>
-      </article>
-      <article id="pku-education" class="education-case-study">
-        <h3>Peking University</h3>
-        <p class="details">Beijing, China &middot; Summer 2025</p>
-        <p><strong>Advanced Topics in Computer Science</strong></p>
-        <p>
-          A summer program at Peking University's School of Computer
-          Science. The program introduced
-          current research across computing, alongside opportunities to meet
-          faculty and students and explore China's technology industry and culture.
-        </p>
-        <h4>Academic focus</h4>
-        <p>
-          The program covered ubiquitous computing, computer vision,
-          and embodied AI, along with the following topics:
-        </p>
-        <ul>
-          <li>Visual computing, computational imaging, and context-aware systems.</li>
-          <li>Programming-language research, open-source analytics, and AI-oriented databases.</li>
-          <li>AI systems practice, hardware/software optimization, adaptive computing,
-              and distributed systems.</li>
-        </ul>
-        <h4>Program format</h4>
-        <p>
-          The schedule combined lectures with lab and technology-company visits,
-          student exchanges, and cultural activities. These describe the program's
-          published offerings.
-        </p>
-        <p>
-          <a href="https://cs.pku.edu.cn/info/1192/3614.htm">Official PKU Summer 2025 program and curriculum</a>.
-        </p>
-        <h4>Life at the program</h4>
-
-        <p>
-          For a closer look at the program's activities, student interactions,
-          and campus experience, see
-          <a href="https://cs.pku.edu.cn/info/1174/3875.htm">PKU's overview and photos from the summer school</a>.
-        </p>
-        <!-- Add personal projects, visits attended, and reflections when supplied. -->
-      </article>
-    </section>
-
-    <!-- RESEARCH AND EXPERIENCE: one article per affiliation; writing accompanies People and Robots. -->
-    <section id="experience" aria-labelledby="experience-heading">
-      <h2 id="experience-heading">Research &amp; Experience</h2>
-      <article id="wa-experience">
-        <h3>Wisconsin Autonomous — SAE AutoDrive / EcoCAR</h3>
-        <p class="details">
-          Infrastructure Team Member; Team Lead since September 2026 · Madison, WI<br>
-          September 2024 – Present
-        </p>
-        <ul>
-          <li>
-            Interviewed, selected, and onboarded more than 10 team members,
-            introducing them to team workflows, in-house tools, and
-            cross-functional collaboration with other sub-teams.
-          </li>
-          <li>
-            Developed localization and path-planning nodes for a Level 4
-            autonomous vehicle that placed 2nd overall in Year 5 of the
-            SAE AutoDrive Challenge II.
-          </li>
-          <li>
-            Contributing to the migration of the autonomy stack to the
-            Chevrolet Blazer for the EcoCAR Innovation Challenge.
-          </li>
-        </ul>
-      </article>
-      <article id="rosenberg-research">
-        <h3>Rosenberg Lab</h3>
-        <p class="details">Undergraduate Researcher · Madison, WI<br>September 2026 – Present</p>
-        <p>
-          I select and develop neural encoding models in PyTorch to characterize
-          relationships between six-degree-of-freedom head pose, eye-tracking
-          features, and neuronal firing activity in macaque monkeys.
-        </p>
-        <p>
-          I also collaborate within a 10-member Agile team using Jira to build
-          a tablet-based behavioral experiment platform. The platform integrates
-          Pupil Core eye tracking, real-time experimental control, and data
-          collection to distinguish neurodiverse behavioral subgroups.
-        </p>
-      </article>
-      <article id="people-robots-research" class="research-case-study">
-        <h3>People and Robots Laboratory</h3>
-        <p class="details">Undergraduate Research Assistant · Madison, WI<br>April 2026 – Present</p>
-        <p>
-          How should a household robot recognize danger and respond in a way
-          that makes sense to the people living there? Embodied AI operates in
-          physical spaces, where mistakes can cause harm, yet its safety awareness
-          is often evaluated in simulation. Our research brings that evaluation
-          into real homes, asking whether AI responses reflect residents' concerns
-          and expectations for help.
-        </p>
-        <p>
-          We combined robot-assisted home tours with web-based hazard documentation.
-          Residents identified risks in their own homes, rated their severity,
-          frequency, and personal concern, and evaluated responses from three
-          multimodal AI models. This let us compare model-generated safety advice
-          with the judgments of people who know the household context.
-        </p>
-        <h4>What we learned</h4>
-        <p>
-          Residents could recognize the potential for serious injury while still
-          feeling little personal concern about a familiar hazard. They wanted
-          robots to support existing safety practices and offer additional ways
-          to manage risks, but model responses did not always meet their
-          expectations. The work highlights why detecting a hazard alone is
-          insufficient: useful assistance must also account for the resident,
-          the intended audience, and what can be done about the risk.
-        </p>
-        <h4>Study sessions</h4>
-        <p>
-          I independently conducted 60 remote participant sessions, guiding
-          residents through documenting household risks and evaluating
-          AI-generated responses. I also helped conduct 13 in-person sessions
-          in collaboration with a graduate student and another undergraduate.
-          The broader study included 113 participants and 1,133 documented
-          household risk entries.
-        </p>
-        <h4>Analysis and supplementary materials</h4>
-        <p>
-          I corrected the study transcripts, extracted key quotations, coded
-          the data, and performed quantitative analysis. I also formatted all
-          supplementary materials and created the study's mappings, contributing
-          to the organization and presentation of the research.
-        </p>
-        <h4>Current status</h4>
-        <p>
-          I am a co-author of the resulting paper, submitted to the CHI 2027
-          Papers track and currently under anonymous review.
-        </p>
-      </article>
-
-      <!-- PUBLICATIONS / WRITING -->
-      <section id="writing" aria-labelledby="writing-heading">
-        <h3 id="writing-heading">Publications / Writing</h3>
-        <p>
-          Co-author of a human–robot interaction paper submitted to the
-          CHI 2027 Papers track; currently under anonymous review.
-        </p>
-        <!-- Submitted, not accepted. Add the title, author list, and public link when available.
-        Replace the paragraph above with a citation list like this:
-        <ul>
-          <li>
-            [Authors]. <a href="https://example.com/paper">[Title]</a>.
-            <cite>[Journal, conference, or publication]</cite>, [Year].
-          </li>
-        </ul>
-        -->
-      </section>
-    </section>
-
-    <!-- PROJECTS: duplicate an article to add an entry. -->
-    <section id="projects" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Projects</h2>
-      <article id="localization-project" class="project-case-study">
-        <h3>Autonomous Vehicle Localization</h3>
+      <div class="inline-links"><a href="#projects">View my projects <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/nathan-kujava-180a94351/">LinkedIn <span aria-hidden="true">↗</span></a></div></div>
+    </div></section>
+    <section class="interest-band" aria-labelledby="interests-heading"><div class="container"><h2 id="interests-heading">Research Interests</h2><div class="interest-grid"><div><span aria-hidden="true">01</span><h3>Autonomous systems</h3></div><div><span aria-hidden="true">02</span><h3>Human–robot interaction</h3></div><div><span aria-hidden="true">03</span><h3>Neural encoding</h3></div></div></div></section>
+    <section class="section" id="projects" aria-labelledby="projects-heading"><div class="container"><div class="section-heading"><h2 id="projects-heading">Selected Projects</h2><p>Localization, motion planning, and simulation with Wisconsin Autonomous.</p></div><div class="project-grid"><article class="project" id="localization-project">
+      <div class="project-intro"><span class="project-number">01</span><p class="eyebrow">State estimation</p><h3>Autonomous Vehicle Localization</h3><p>Estimating vehicle motion when GPS is unavailable, with wheel odometry, inertial measurements, and an extended Kalman filter.</p></div>
+      <details><summary>Explore project <span aria-hidden="true">+</span></summary><div class="case-body">
         <p class="details">Wisconsin Autonomous · SAE AutoDrive</p>
         <p class="details">Technologies: C++, ROS 2, CAN, IMU, extended Kalman filtering, and Foxglove Studio.</p>
 
@@ -298,8 +80,8 @@
           along the full route. The team placed third out of ten in the localization
           challenge.
         </p>
-        <!-- Add a repository or project link here when available. -->
-        <!-- LOCALIZATION RESULTS: add figures, measurements, or data below. -->
+
+
 
         <h4>Lessons learned</h4>
         <p>
@@ -308,10 +90,46 @@
           Many questions depended on our particular sensors, interfaces, and
           vehicle setup, so progress required working with teammates and tracing
           the existing system rather than relying on a generic online answer.
-        </p>
-      </article>
-      <article id="planner-project" class="project-case-study">
-        <h3>Autonomous Vehicle Mid-Level Planner</h3>
+        </p><div class="project-media"><section class="project-evidence" aria-labelledby="localization-results-heading">
+          <h2 id="localization-results-heading">Demo and results</h2>
+          <p>
+            Red shows the estimated trajectory and blue shows the GPS reference.
+            The separation between the lines provides a visual comparison of
+            the paths; these images do not represent a calculated point-by-point
+            error metric.
+          </p>
+
+          <div class="localization-gallery">
+          <figure class="trajectory-comparison">
+            <a href="assets/projects/localization-trajectory.png">
+              <img src="assets/projects/localization-trajectory.png"
+                   alt="Overhead view of a test route, comparing the estimated vehicle trajectory in red with the GPS trajectory in blue."
+                   width="736" height="1052" loading="lazy">
+            </a>
+            <figcaption>
+              Example output from my localization nodes: the estimated vehicle
+              trajectory is shown in red, and the GPS trajectory in blue.
+              <a href="assets/projects/localization-trajectory.png">View the full-size comparison</a>.
+            </figcaption>
+          </figure>
+          <figure class="trajectory-comparison">
+            <a href="assets/projects/localization-parking-lot.png">
+              <img src="assets/projects/localization-parking-lot.png"
+                   alt="Overhead view of a parking-lot route, comparing the estimated vehicle trajectory in red with the GPS trajectory in blue."
+                   width="566" height="1139" loading="lazy">
+            </a>
+            <figcaption>
+              A second localization example through a parking lot: red shows
+              the estimated vehicle trajectory, and blue shows the GPS trajectory.
+              <a href="assets/projects/localization-parking-lot.png">View the full-size comparison</a>.
+            </figcaption>
+          </figure>
+          </div>
+
+        </section></div></div></details>
+    </article><article class="project" id="planner-project">
+      <div class="project-intro"><span class="project-number">02</span><p class="eyebrow">Motion planning</p><h3>Autonomous Vehicle Mid-Level Planner</h3><p>Turning route guidance and detected lane geometry into trajectories for an autonomous vehicle.</p></div>
+      <details><summary>Explore project <span aria-hidden="true">+</span></summary><div class="case-body">
         <p class="details">Wisconsin Autonomous · SAE AutoDrive</p>
         <p class="details">Technologies: Python, ROS 2, NumPy, and Frenet-frame planning.</p>
 
@@ -350,8 +168,8 @@
           Simulation was therefore central to exploring and refining planning
           ideas before spending limited time testing on the vehicle.
         </p>
-        <!-- Add a repository or project link here when available. -->
-        <!-- MID-LEVEL PLANNER RESULTS: duplicate a figure to add another demo or plot. -->
+
+
 
         <h4>Lessons learned</h4>
         <p>
@@ -362,11 +180,36 @@
           testing exposed integration issues that needed the full system.
           The rewrite gave us a more maintainable foundation for extending
           planning behavior as perception capabilities improved.
-        </p>
-      </article>
-      <!-- MIDPLANNER SIMULATOR: early planning prototype and lessons learned. -->
-      <article id="midplanner-simulator" class="project-case-study">
-        <h3>Midplanner Prototyping Simulator</h3>
+        </p><div class="project-media"><section class="project-evidence" aria-labelledby="planner-results-heading">
+          <h2 id="planner-results-heading">Demo and results</h2>
+          <p>
+            This planner runs on the vehicle. The main gain over the previous
+            iteration was incorporating lane-line detections into planning.
+            The recording below shows this version during our team's AV test;
+            it demonstrates the integrated system, including work from other subteams.
+          </p>
+          <figure>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/buRxjcsR3aQ"
+              title="Wisconsin Autonomous AV 2025 — autonomous vehicle test submission"
+              width="720"
+              height="405"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="encrypted-media; picture-in-picture; fullscreen"
+              allowfullscreen
+            ></iframe>
+            <figcaption>
+              Wisconsin Autonomous AV 2025 — our test submission with this midplanner running on the vehicle.
+              <a href="https://www.youtube.com/watch?v=buRxjcsR3aQ">Watch the AV test on YouTube</a>.
+            </figcaption>
+          </figure>
+
+
+        </section></div></div></details>
+    </article><article class="project" id="midplanner-simulator">
+      <div class="project-intro"><span class="project-number">03</span><p class="eyebrow">Simulation</p><h3>Midplanner Prototyping Simulator</h3><p>Prototyping lane-following and intersection logic with simulated perception before testing on the vehicle.</p></div>
+      <details><summary>Explore project <span aria-hidden="true">+</span></summary><div class="case-body">
         <p class="details">Wisconsin Autonomous · Early planning prototype</p>
         <p class="details">Technologies: C++17, raylib, raygui, and CMake.</p>
 
@@ -416,148 +259,7 @@
           final planning algorithm, but this iteration helped us examine the handoff
           between lane following and route-based guidance. It documents a prototyping
           step, rather than validation of the final vehicle planner.
-        </p>
-
-      </article>
-    </section>
-
-
-
-  </main>
-
-  <!-- LEFT COLUMN: tab media, or the default photo and contact when none is available. -->
-  <aside class="sidebar" aria-label="Selected section media and contact" tabindex="0">
-    <div id="about-media" class="media-panel">
-    <!-- PHOTO: replace the filename and alt text here to use a different image. -->
-    <img
-      src="PXL_20260824_014411149.jpg"
-      alt="Sand and sandals on a beach at night, with buildings in the distance."
-      width="2729"
-      height="1535"
-    >
-    <p class="profile-summary">Computer Science &amp; Psychology<br>University of Wisconsin&ndash;Madison</p>
-    <section id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact</h2>
-      <address>
-        <ul>
-          <li>Email: nathankujava@gmail.com</li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/nathan-kujava-180a94351/">Nathan Kujava</a></li>
-        </ul>
-      </address>
-    </section>
-    <!-- READING: keep up to three recent links; add a short personal note if desired. -->
-    <section id="reading" aria-labelledby="reading-heading">
-      <h2 id="reading-heading">I've been reading...</h2>
-      <ul class="reading-list">
-        <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=RAiewnEAAAAJ&amp;citation_for_view=RAiewnEAAAAJ:WbkHhVStYXYC">The DARPA Urban Challenge: Autonomous Vehicles in City Traffic</a></li>
-        <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=RAiewnEAAAAJ&amp;citation_for_view=RAiewnEAAAAJ:WF5omc3nYNoC">Anytime Motion Planning Using the RRT*</a></li>
-        <li><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=RAiewnEAAAAJ&amp;citation_for_view=RAiewnEAAAAJ:u-x6o8ySG0sC">A Perception-Driven Autonomous Urban Vehicle</a></li>
-      </ul>
-    </section>
-    </div>
-    <div id="pku-media" class="media-panel">
-        <div class="project-evidence">
-          <figure>
-            <a href="assets/education/pku-cohort.png">
-              <img src="assets/education/pku-cohort.png"
-                   alt="Summer school group posing in a classroom with a red Peking University banner."
-                   width="512" height="288" loading="lazy">
-            </a>
-            <figcaption>Peking University computer science summer school cohort, 2025.</figcaption>
-          </figure>
-        </div>
-    </div>
-    <div id="localization-media" class="media-panel">
-        <section class="project-evidence" aria-labelledby="localization-results-heading">
-          <h2 id="localization-results-heading">Demo and results</h2>
-          <p>
-            Red shows the estimated trajectory and blue shows the GPS reference.
-            The separation between the lines provides a visual comparison of
-            the paths; these images do not represent a calculated point-by-point
-            error metric.
-          </p>
-          <!-- Duplicate this figure to add another localization plot or screenshot. -->
-          <div class="localization-gallery">
-          <figure class="trajectory-comparison">
-            <a href="assets/projects/localization-trajectory.png">
-              <img src="assets/projects/localization-trajectory.png"
-                   alt="Overhead view of a test route, comparing the estimated vehicle trajectory in red with the GPS trajectory in blue."
-                   width="736" height="1052" loading="lazy">
-            </a>
-            <figcaption>
-              Example output from my localization nodes: the estimated vehicle
-              trajectory is shown in red, and the GPS trajectory in blue.
-              <a href="assets/projects/localization-trajectory.png">View the full-size comparison</a>.
-            </figcaption>
-          </figure>
-          <figure class="trajectory-comparison">
-            <a href="assets/projects/localization-parking-lot.png">
-              <img src="assets/projects/localization-parking-lot.png"
-                   alt="Overhead view of a parking-lot route, comparing the estimated vehicle trajectory in red with the GPS trajectory in blue."
-                   width="566" height="1139" loading="lazy">
-            </a>
-            <figcaption>
-              A second localization example through a parking lot: red shows
-              the estimated vehicle trajectory, and blue shows the GPS trajectory.
-              <a href="assets/projects/localization-parking-lot.png">View the full-size comparison</a>.
-            </figcaption>
-          </figure>
-          </div>
-          <!-- DATA TEMPLATE: replace prompts with actual results, then uncomment.
-          <table>
-            <caption>[Localization test and evaluation conditions]</caption>
-            <thead><tr><th scope="col">Measurement</th><th scope="col">Result</th></tr></thead>
-            <tbody><tr><th scope="row">[Metric and units]</th><td>[Measured value]</td></tr></tbody>
-          </table>
-          <p><a href="assets/projects/localization-results.csv" download>Download localization test data (CSV)</a></p>
-          -->
-        </section>
-    </div>
-    <div id="planner-media" class="media-panel">
-        <section class="project-evidence" aria-labelledby="planner-results-heading">
-          <h2 id="planner-results-heading">Demo and results</h2>
-          <p>
-            This planner runs on the vehicle. The main gain over the previous
-            iteration was incorporating lane-line detections into planning.
-            The recording below shows this version during our team's AV test;
-            it demonstrates the integrated system, including work from other subteams.
-          </p>
-          <figure>
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/buRxjcsR3aQ"
-              title="Wisconsin Autonomous AV 2025 — autonomous vehicle test submission"
-              width="720"
-              height="405"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="encrypted-media; picture-in-picture; fullscreen"
-              allowfullscreen
-            ></iframe>
-            <figcaption>
-              Wisconsin Autonomous AV 2025 — our test submission with this midplanner running on the vehicle.
-              <a href="https://www.youtube.com/watch?v=buRxjcsR3aQ">Watch the AV test on YouTube</a>.
-            </figcaption>
-          </figure>
-          <!-- IMAGE TEMPLATE: add your file and describe what the plot demonstrates.
-          <figure>
-            <img src="assets/projects/planner-trajectories.png"
-                 alt="[Describe the planned path, obstacles, and lane boundaries.]" loading="lazy">
-            <figcaption>[Scenario, test conditions, and observed planner behavior.]</figcaption>
-          </figure>
-          -->
-          <!-- DATA TEMPLATE: replace prompts with measured results, then uncomment.
-          <table>
-            <caption>[Planner test and evaluation conditions]</caption>
-            <thead><tr><th scope="col">Measurement</th><th scope="col">Result</th></tr></thead>
-            <tbody><tr><th scope="row">[Metric and units]</th><td>[Measured value]</td></tr></tbody>
-          </table>
-          <p><a href="assets/projects/planner-results.csv" download>Download planner test data (CSV)</a></p>
-          -->
-        </section>
-    </div>
-
-    <div id="simulator-media" class="media-panel">
-        <section class="project-evidence" aria-labelledby="simulator-results-heading">
+        </p><div class="project-media"><section class="project-evidence" aria-labelledby="simulator-results-heading">
           <h2 id="simulator-results-heading">Simulator demonstration</h2>
           <p>
             We built this prototype to develop lane-following logic while our
@@ -565,7 +267,7 @@
             lane detections and route-based guidance at intersections.
           </p>
           <figure>
-            <!-- SIMULATOR RESULTS: update both the embed and direct link for a new recording. -->
+
             <iframe
               src="https://www.youtube-nocookie.com/embed/YoG1P2SROU0"
               title="Midplanner Prototyping Simulator demonstration"
@@ -584,57 +286,161 @@
               <a href="https://www.youtube.com/watch?v=YoG1P2SROU0">Watch the simulator demonstration on YouTube</a>.
             </figcaption>
           </figure>
-        </section>
-    </div>
-  </aside>
+        </section></div></div></details>
+    </article></div></div></section>
+    <section class="section muted-section" id="experience" aria-labelledby="experience-heading"><div class="container narrow"><div class="section-heading"><h2 id="experience-heading">Research &amp; Experience</h2></div><div class="timeline"><article class="timeline-entry" id="people-robots-research"><h3>People and Robots Laboratory</h3>
+        <p class="details">Undergraduate Research Assistant · Madison, WI<br>April 2026 – Present</p>
+        <p>
+          How should a household robot recognize danger and respond in a way
+          that makes sense to the people living there? Embodied AI operates in
+          physical spaces, where mistakes can cause harm, yet its safety awareness
+          is often evaluated in simulation. Our research brings that evaluation
+          into real homes, asking whether AI responses reflect residents' concerns
+          and expectations for help.
+        </p>
+        <p>
+          We combined robot-assisted home tours with web-based hazard documentation.
+          Residents identified risks in their own homes, rated their severity,
+          frequency, and personal concern, and evaluated responses from three
+          multimodal AI models. This let us compare model-generated safety advice
+          with the judgments of people who know the household context.
+        </p>
+        <details><summary>Read more about the research <span aria-hidden="true">+</span></summary><div class="case-body"><h4>What we learned</h4>
+        <p>
+          Residents could recognize the potential for serious injury while still
+          feeling little personal concern about a familiar hazard. They wanted
+          robots to support existing safety practices and offer additional ways
+          to manage risks, but model responses did not always meet their
+          expectations. The work highlights why detecting a hazard alone is
+          insufficient: useful assistance must also account for the resident,
+          the intended audience, and what can be done about the risk.
+        </p>
+        <h4>Study sessions</h4>
+        <p>
+          I independently conducted 60 remote participant sessions, guiding
+          residents through documenting household risks and evaluating
+          AI-generated responses. I also helped conduct 13 in-person sessions
+          in collaboration with a graduate student and another undergraduate.
+          The broader study included 113 participants and 1,133 documented
+          household risk entries.
+        </p>
+        <h4>Analysis and supplementary materials</h4>
+        <p>
+          I corrected the study transcripts, extracted key quotations, coded
+          the data, and performed quantitative analysis. I also formatted all
+          supplementary materials and created the study's mappings, contributing
+          to the organization and presentation of the research.
+        </p>
+        <h4>Current status</h4>
+        <p>
+          I am a co-author of the resulting paper, submitted to the CHI 2027
+          Papers track and currently under anonymous review.
+        </p></div></details></article><article class="timeline-entry" id="rosenberg-research"><h3>Rosenberg Lab</h3>
+        <p class="details">Undergraduate Researcher · Madison, WI<br>September 2026 – Present</p>
+        <p>
+          I select and develop neural encoding models in PyTorch to characterize
+          relationships between six-degree-of-freedom head pose, eye-tracking
+          features, and neuronal firing activity in macaque monkeys.
+        </p>
+        <p>
+          I also collaborate within a 10-member Agile team using Jira to build
+          a tablet-based behavioral experiment platform. The platform integrates
+          Pupil Core eye tracking, real-time experimental control, and data
+          collection to distinguish neurodiverse behavioral subgroups.
+        </p></article><article class="timeline-entry" id="wa-experience"><h3>Wisconsin Autonomous — SAE AutoDrive / EcoCAR</h3>
+        <p class="details">
+          Infrastructure Team Member; Team Lead since September 2026 · Madison, WI<br>
+          September 2024 – Present
+        </p>
+        <ul>
+          <li>
+            Interviewed, selected, and onboarded more than 10 team members,
+            introducing them to team workflows, in-house tools, and
+            cross-functional collaboration with other sub-teams.
+          </li>
+          <li>
+            Developed localization and path-planning nodes for a Level 4
+            autonomous vehicle that placed 2nd overall in Year 5 of the
+            SAE AutoDrive Challenge II.
+          </li>
+          <li>
+            Contributing to the migration of the autonomy stack to the
+            Chevrolet Blazer for the EcoCAR Innovation Challenge.
+          </li>
+        </ul></article></div></div></section>
+    <section class="section publications-section" id="writing" aria-labelledby="writing-heading"><div class="container narrow"><div class="section-heading"><h2 id="writing-heading">Publications / Writing</h2></div><div class="writing"><p>
+          Co-author of a human–robot interaction paper submitted to the
+          CHI 2027 Papers track; currently under anonymous review.
+        </p></div></div></section>
+    <section class="section muted-section" id="education" aria-labelledby="education-heading"><div class="container"><div class="section-heading"><h2 id="education-heading">Education</h2></div><div class="education-grid"><article class="education-entry" id="madison-education"><h3>University of Wisconsin</h3>
+        <p class="details">Madison, WI &middot; September 2024 &ndash; expected May 2028</p>
+        <p>B.S. in Computer Science &amp; Psychology.</p>
+          <details><summary>Coursework &amp; program details <span aria-hidden="true">+</span></summary><div class="case-body"><h4>Completed coursework</h4>
+          <ul>
+            <li><strong>COMP SCI 537 &mdash; Introduction to Operating Systems:</strong> Process scheduling, memory virtualization, resource management, and the interaction between software and hardware.</li>
+            <li><strong>COMP SCI 559 &mdash; Computer Graphics:</strong> Geometric transformations, rendering, animation, and representing objects and images in two and three dimensions.</li>
+            <li><strong>COMP SCI 354 &mdash; Machine Organization and Programming:</strong> C and assembly programming, memory allocation, caching, and how low-level system organization affects performance.</li>
+            <li><strong>E C E 352 &mdash; Digital System Fundamentals:</strong> Boolean logic, combinational and sequential circuits, and the building blocks of digital computer systems.</li>
+            <li><strong>COMP SCI 400 &mdash; Programming III:</strong> Trees, graphs, hash tables, complexity analysis, and building maintainable software with advanced data structures.</li>
+          </ul>
+          <h4>In progress &mdash; Fall 2026</h4>
+          <ul>
+            <li><strong>COMP SCI 580 &mdash; Intelligent Robotics:</strong> Robot perception, state estimation, motion planning, kinematics, learning, and control.</li>
+            <li><strong>COMP SCI 577 &mdash; Introduction to Algorithms:</strong> Algorithm design through greedy methods, divide-and-conquer, dynamic programming, and reasoning about computational limits.</li>
+            <li><strong>COMP SCI 620 &mdash; Computer Sciences Capstone:</strong> Team software development for a corporate client, from design through testing, documentation, and delivery.</li>
+          </ul>
+          <p class="details">
+            Course descriptions adapted from UW&ndash;Madison's
+            <a href="https://guide.wisc.edu/courses/comp_sci/">Computer Sciences catalog</a>
+            and <a href="https://guide.wisc.edu/courses/e_c_e/">Electrical and Computer Engineering catalog</a>.
+          </p></div></details></article><article class="education-entry" id="pku-education"><h3>Peking University</h3>
+        <p class="details">Beijing, China &middot; Summer 2025</p>
+        <p><strong>Advanced Topics in Computer Science</strong></p>
+        <p>
+          A summer program at Peking University's School of Computer
+          Science. The program introduced
+          current research across computing, alongside opportunities to meet
+          faculty and students and explore China's technology industry and culture.
+        </p>
+        <details><summary>Coursework &amp; program details <span aria-hidden="true">+</span></summary><div class="case-body"><h4>Academic focus</h4>
+        <p>
+          The program covered ubiquitous computing, computer vision,
+          and embodied AI, along with the following topics:
+        </p>
+        <ul>
+          <li>Visual computing, computational imaging, and context-aware systems.</li>
+          <li>Programming-language research, open-source analytics, and AI-oriented databases.</li>
+          <li>AI systems practice, hardware/software optimization, adaptive computing,
+              and distributed systems.</li>
+        </ul>
+        <h4>Program format</h4>
+        <p>
+          The schedule combined lectures with lab and technology-company visits,
+          student exchanges, and cultural activities. These describe the program's
+          published offerings.
+        </p>
+        <p>
+          <a href="https://cs.pku.edu.cn/info/1192/3614.htm">Official PKU Summer 2025 program and curriculum</a>.
+        </p>
+        <h4>Life at the program</h4>
 
-
-  <!-- Reset each nested selection whenever its parent section is opened. -->
-  <script>
-    const main = document.querySelector('main');
-    const projectsTab = document.querySelector('input[name="section"][value="projects"]');
-    function resetProjects() {
-      document.querySelector('input[name="project"][value="localization"]').checked = true;
-      main.scrollTop = 0;
-      document.querySelector(".sidebar").scrollTop = 0;
-    }
-    projectsTab.addEventListener('click', resetProjects);
-    projectsTab.addEventListener('change', resetProjects);
-    const experienceTab = document.querySelector('input[name="section"][value="experience"]');
-    function resetExperience() {
-      document.querySelector('input[name="affiliation"][value="people-robots"]').checked = true;
-      main.scrollTop = 0;
-      document.querySelector(".sidebar").scrollTop = 0;
-    }
-    experienceTab.addEventListener('click', resetExperience);
-    experienceTab.addEventListener('change', resetExperience);
-    const educationTab = document.querySelector('input[name="section"][value="education"]');
-    function resetEducation() {
-      document.querySelector('input[name="school"][value="madison"]').checked = true;
-      main.scrollTop = 0;
-      document.querySelector(".sidebar").scrollTop = 0;
-    }
-    educationTab.addEventListener('click', resetEducation);
-    educationTab.addEventListener('change', resetEducation);
-    document.querySelectorAll('input[name="project"], input[name="affiliation"], input[name="school"]').forEach(input => {
-      input.addEventListener('change', () => { main.scrollTop = 0; document.querySelector(".sidebar").scrollTop = 0; });
-    });
-    // The About guide opens the corresponding tabs and moves keyboard focus with them.
-    document.querySelectorAll('.site-guide a[data-section]').forEach(link => {
-      link.addEventListener('click', event => {
-        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-        event.preventDefault();
-        const tab = document.querySelector(`input[name="section"][value="${link.dataset.section}"]`);
-        tab.click();
-        const school = link.dataset.school
-          ? document.querySelector(`input[name="school"][value="${link.dataset.school}"]`)
-          : null;
-        if (school) school.click();
-        (school || tab).focus({ preventScroll: true });
-        main.scrollTop = 0;
-        document.querySelector('.section-header').scrollIntoView({ block: 'start' });
-      });
-    });
-  </script>
+        <p>
+          For a closer look at the program's activities, student interactions,
+          and campus experience, see
+          <a href="https://cs.pku.edu.cn/info/1174/3875.htm">PKU's overview and photos from the summer school</a>.
+        </p><div class="project-evidence">
+          <figure>
+            <a href="assets/education/pku-cohort.png">
+              <img src="assets/education/pku-cohort.png"
+                   alt="Summer school group posing in a classroom with a red Peking University banner."
+                   width="512" height="288" loading="lazy">
+            </a>
+            <figcaption>Peking University computer science summer school cohort, 2025.</figcaption>
+          </figure>
+        </div></div></details></article></div></div></section>
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading"><div class="container"><h2 id="contact-heading">Contact</h2><div class="contact-actions"><a class="contact-email" href="mailto:nathankujava@gmail.com">nathankujava@gmail.com</a><a class="linkedin-button" href="https://www.linkedin.com/in/nathan-kujava-180a94351/"><span class="linkedin-icon" aria-hidden="true">in</span><span>LinkedIn</span><span class="linkedin-arrow" aria-hidden="true">&#8599;</span></a></div></div></section>
+  </main>
+  <footer><span>Nathan Kujava · University of Wisconsin–Madison</span><span class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Gfp-wisconsin-madison-city-skyline-in-the-winter.jpg">Yinan Chen</a> / Public domain</span><a href="#top">Back to top ↑</a></footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
