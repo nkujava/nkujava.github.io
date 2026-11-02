@@ -2,7 +2,7 @@
 
 :root { --blue: #237daa; --blue-dark: #195b7c; --gold: #fcbc1d; --ink: #252a30; --muted: #626b73; --paper: #f1f3f4; }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 95px; }
+html { scroll-behavior: smooth; scroll-padding-top: 95px; overscroll-behavior-y: none; }
 body { margin: 0; color: var(--ink); background: white; font: 18px/1.7 'Source Sans 3', 'Segoe UI', sans-serif; }
 h1, h2, h3, .brand, .nav-links, .button, .eyebrow { font-family: Montserrat, 'Segoe UI', sans-serif; }
 h1, h2, h3, h4 { line-height: 1.25; }
