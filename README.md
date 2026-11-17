@@ -1,6 +1,6 @@
 # Nathan Kujava personal portfolio
 
-A static portfolio for https://nathankujava.dev, hosted from this repository with GitHub Pages. Open `index.html` locally; no installation or build is required.
+A static portfolio, hosted from this repository with GitHub Pages. Open `index.html` locally; no installation or build is required.
 
 `assets/images/madison-winter.jpg`: [Madison city skyline in winter](https://commons.wikimedia.org/wiki/File:Gfp-wisconsin-madison-city-skyline-in-the-winter.jpg) by Yinan Chen, released into the public domain. The photograph shows the Capitol skyline across a frozen lake. CSS crops it to the viewport and adds a dark overlay. Photo credit appears in the footer.
 
